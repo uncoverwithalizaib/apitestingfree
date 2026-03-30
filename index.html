@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free API for Testing – 1500+ Public APIs for Developers | APITestingFree.com</title>
+  <meta name="description" content="Discover 1500+ free public APIs for testing, practice, and prototyping. No API key required for most. Browse free REST APIs by category — perfect for developers learning API integration." />
+  <meta name="keywords" content="free api for testing, free api for testing online, free api for testing without key, free public api for testing, free rest api for testing, test api online free, free mock api, free api endpoint for testing, free api for practice, free api to test, sample free api for testing" />
+  <link rel="canonical" href="https://apitestingfree.com/" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Free API for Testing – 1500+ Public APIs for Developers" />
+  <meta property="og:description" content="Browse 1500+ free public APIs for testing and prototyping. No signup required for most. Perfect for developers learning REST API integration." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://apitestingfree.com/" />
+  <meta property="og:image" content="https://apitestingfree.com/og-image.png" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free API for Testing – 1500+ Public APIs" />
+  <meta name="twitter:description" content="Discover free public APIs for testing, practice, and prototyping without a key." />
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "APITestingFree",
+    "url": "https://apitestingfree.com",
+    "description": "The largest curated directory of free public APIs for testing and learning",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://apitestingfree.com/apis?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0e17;
+      --bg2: #0f1521;
+      --bg3: #141c2e;
+      --surface: #1a2336;
+      --surface2: #1f2b42;
+      --border: #2a3a58;
+      --accent: #00e5a0;
+      --accent2: #0099ff;
+      --accent3: #ff6b35;
+      --text: #e8edf5;
+      --text2: #8fa3c0;
+      --text3: #5a7299;
+      --mono: 'DM Mono', monospace;
+      --serif: 'Lora', serif;
+      --sans: 'Syne', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.6; overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2rem; height: 64px;
+      background: rgba(10,14,23,0.92); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-size: 1.15rem; font-weight: 800; color: var(--accent); letter-spacing: -0.5px; text-decoration: none; }
+    .nav-logo span { color: var(--text2); font-weight: 400; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--text2); text-decoration: none; font-size: 0.875rem; font-weight: 600; transition: color 0.2s; letter-spacing: 0.02em; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta { background: var(--accent); color: #0a0e17; padding: 0.45rem 1.1rem; border-radius: 6px; font-size: 0.85rem; font-weight: 700; text-decoration: none; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.85; }
+    .nav-mobile-btn { display: none; background: none; border: none; cursor: pointer; color: var(--text); font-size: 1.5rem; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 7rem 2rem 4rem; text-align: center; position: relative; overflow: hidden;
+    }
+    .hero-grid {
+      position: absolute; inset: 0; z-index: 0;
+      background-image: linear-gradient(rgba(0,229,160,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,229,160,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-glow {
+      position: absolute; width: 700px; height: 700px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,229,160,0.08) 0%, transparent 70%);
+      top: 50%; left: 50%; transform: translate(-50%, -55%); z-index: 0;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 860px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(0,229,160,0.1); border: 1px solid rgba(0,229,160,0.3);
+      color: var(--accent); padding: 0.35rem 0.9rem; border-radius: 100px;
+      font-family: var(--mono); font-size: 0.78rem; margin-bottom: 1.5rem;
+      animation: fadeDown 0.6s ease both;
+    }
+    .hero-badge::before { content: '●'; font-size: 0.5rem; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    @keyframes fadeDown { from{opacity:0;transform:translateY(-12px)} to{opacity:1;transform:none} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none} }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 800; line-height: 1.1;
+      letter-spacing: -0.03em; margin-bottom: 1.4rem;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+    .hero h1 em { font-style: normal; color: var(--accent); }
+    .hero h1 .line2 { display: block; color: var(--text2); font-weight: 600; font-size: 0.75em; margin-top: 0.3rem; }
+    .hero-desc {
+      font-family: var(--serif); font-size: 1.15rem; color: var(--text2); max-width: 620px;
+      margin: 0 auto 2.5rem; line-height: 1.8;
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+    .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeUp 0.7s 0.3s ease both; }
+    .btn-primary {
+      background: var(--accent); color: #0a0e17; padding: 0.8rem 2rem;
+      border-radius: 8px; font-weight: 700; font-size: 1rem; text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 0 24px rgba(0,229,160,0.3);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(0,229,160,0.4); }
+    .btn-secondary {
+      background: var(--surface2); color: var(--text); padding: 0.8rem 2rem;
+      border-radius: 8px; font-weight: 600; font-size: 1rem; text-decoration: none;
+      border: 1px solid var(--border); transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--accent2); background: var(--surface); }
+
+    .hero-stats {
+      display: flex; gap: 3rem; justify-content: center; margin-top: 3.5rem;
+      animation: fadeUp 0.7s 0.4s ease both; flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-num { font-size: 2rem; font-weight: 800; color: var(--accent); line-height: 1; }
+    .stat-label { font-size: 0.78rem; color: var(--text3); margin-top: 0.3rem; font-family: var(--mono); letter-spacing: 0.05em; text-transform: uppercase; }
+
+    /* SEARCH BAR */
+    .search-section { padding: 0 2rem 4rem; max-width: 760px; margin: 0 auto; }
+    .search-box {
+      display: flex; align-items: center; gap: 0.75rem;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 0.75rem 1rem;
+      transition: border-color 0.2s; box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    }
+    .search-box:focus-within { border-color: var(--accent); }
+    .search-icon { color: var(--text3); font-size: 1.1rem; }
+    #searchInput {
+      flex: 1; background: none; border: none; outline: none;
+      color: var(--text); font-family: var(--mono); font-size: 0.95rem;
+    }
+    #searchInput::placeholder { color: var(--text3); }
+    .search-btn {
+      background: var(--accent); color: #0a0e17; border: none; cursor: pointer;
+      padding: 0.5rem 1.2rem; border-radius: 7px; font-weight: 700; font-size: 0.875rem;
+      transition: opacity 0.2s;
+    }
+    .search-btn:hover { opacity: 0.85; }
+
+    /* CATEGORIES STRIP */
+    .categories-strip {
+      padding: 1rem 2rem 3rem; max-width: 1200px; margin: 0 auto;
+    }
+    .section-label { font-family: var(--mono); font-size: 0.75rem; color: var(--text3); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem; }
+    .cats-scroll { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .cat-pill {
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--text2); padding: 0.35rem 0.85rem; border-radius: 100px;
+      font-size: 0.8rem; cursor: pointer; transition: all 0.2s; white-space: nowrap;
+      text-decoration: none;
+    }
+    .cat-pill:hover, .cat-pill.active { background: var(--accent); color: #0a0e17; border-color: var(--accent); font-weight: 600; }
+
+    /* API DIRECTORY */
+    .apis-section { padding: 2rem 2rem 5rem; max-width: 1200px; margin: 0 auto; }
+    .section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+    .section-title { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em; }
+    .section-title span { color: var(--accent); }
+    .results-count { font-family: var(--mono); font-size: 0.8rem; color: var(--text3); }
+
+    .api-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .api-card {
+      background: var(--surface); padding: 1.4rem 1.5rem;
+      transition: background 0.2s; border-right: none; border-bottom: none;
+      display: flex; flex-direction: column; gap: 0.6rem;
+    }
+    .api-card:hover { background: var(--surface2); }
+    .api-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.5rem; }
+    .api-name { font-weight: 700; font-size: 1rem; color: var(--text); line-height: 1.3; }
+    .api-badges { display: flex; gap: 0.4rem; flex-wrap: wrap; flex-shrink: 0; }
+    .badge {
+      font-family: var(--mono); font-size: 0.68rem; padding: 0.2rem 0.55rem;
+      border-radius: 4px; font-weight: 500; white-space: nowrap;
+    }
+    .badge-free { background: rgba(0,229,160,0.12); color: var(--accent); border: 1px solid rgba(0,229,160,0.25); }
+    .badge-auth { background: rgba(255,107,53,0.12); color: var(--accent3); border: 1px solid rgba(255,107,53,0.25); }
+    .badge-https { background: rgba(0,153,255,0.12); color: var(--accent2); border: 1px solid rgba(0,153,255,0.25); }
+    .badge-cors { background: rgba(139,92,246,0.12); color: #a78bfa; border: 1px solid rgba(139,92,246,0.25); }
+    .api-desc { font-size: 0.875rem; color: var(--text2); line-height: 1.5; font-family: var(--serif); }
+    .api-cat { font-family: var(--mono); font-size: 0.72rem; color: var(--text3); }
+    .api-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      color: var(--accent2); font-size: 0.8rem; text-decoration: none;
+      font-weight: 600; margin-top: auto; transition: gap 0.2s;
+    }
+    .api-link:hover { gap: 0.6rem; }
+
+    /* FILTERS */
+    .filters-bar { display: flex; gap: 0.75rem; margin-bottom: 1.5rem; flex-wrap: wrap; align-items: center; }
+    .filter-select {
+      background: var(--surface); border: 1px solid var(--border); color: var(--text2);
+      padding: 0.45rem 0.9rem; border-radius: 7px; font-size: 0.85rem;
+      cursor: pointer; outline: none; font-family: var(--sans);
+      transition: border-color 0.2s;
+    }
+    .filter-select:focus { border-color: var(--accent2); }
+    .filter-chip {
+      background: rgba(0,153,255,0.1); border: 1px solid rgba(0,153,255,0.3);
+      color: var(--accent2); padding: 0.3rem 0.75rem; border-radius: 100px;
+      font-size: 0.78rem; cursor: pointer; transition: all 0.2s; font-family: var(--mono);
+    }
+    .filter-chip.active { background: var(--accent2); color: #0a0e17; }
+    .filter-chip:hover { opacity: 0.8; }
+
+    /* PAGINATION */
+    .pagination { display: flex; justify-content: center; gap: 0.5rem; margin-top: 2.5rem; flex-wrap: wrap; }
+    .page-btn {
+      background: var(--surface); border: 1px solid var(--border); color: var(--text2);
+      padding: 0.5rem 0.9rem; border-radius: 7px; cursor: pointer; font-size: 0.875rem;
+      transition: all 0.2s; font-family: var(--mono);
+    }
+    .page-btn:hover, .page-btn.active { background: var(--accent); color: #0a0e17; border-color: var(--accent); font-weight: 700; }
+
+    /* FEATURE SECTION */
+    .features-section { padding: 5rem 2rem; background: var(--bg2); }
+    .features-inner { max-width: 1200px; margin: 0 auto; }
+    .features-heading { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.75rem; }
+    .features-sub { color: var(--text2); font-family: var(--serif); font-size: 1.05rem; max-width: 520px; margin-bottom: 3.5rem; line-height: 1.7; }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+    .feature-card {
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.75rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .feature-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .feature-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .feature-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .feature-body { font-size: 0.875rem; color: var(--text2); line-height: 1.6; font-family: var(--serif); }
+
+    /* POPULAR APIS */
+    .popular-section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+    .popular-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    .popular-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+      padding: 1.5rem; transition: all 0.2s; position: relative; overflow: hidden;
+    }
+    .popular-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+    }
+    .popular-card:hover { border-color: rgba(0,229,160,0.4); transform: translateY(-3px); }
+    .popular-num { font-family: var(--mono); font-size: 0.75rem; color: var(--text3); margin-bottom: 0.75rem; }
+    .popular-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .popular-desc { font-size: 0.85rem; color: var(--text2); line-height: 1.5; margin-bottom: 1rem; font-family: var(--serif); }
+    .popular-meta { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+    /* HOW IT WORKS */
+    .howto-section { padding: 5rem 2rem; background: var(--bg2); }
+    .howto-inner { max-width: 900px; margin: 0 auto; }
+    .howto-steps { display: grid; gap: 1px; margin-top: 2.5rem; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .howto-step {
+      background: var(--bg3); padding: 1.75rem 2rem;
+      display: grid; grid-template-columns: 48px 1fr; gap: 1.5rem; align-items: start;
+      transition: background 0.2s;
+    }
+    .howto-step:hover { background: var(--surface); }
+    .step-num {
+      width: 48px; height: 48px; border-radius: 10px;
+      background: rgba(0,229,160,0.1); border: 1px solid rgba(0,229,160,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-weight: 700; color: var(--accent); font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .step-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .step-body { font-size: 0.875rem; color: var(--text2); line-height: 1.6; font-family: var(--serif); }
+
+    /* CODE EXAMPLE */
+    .code-section { padding: 5rem 2rem; max-width: 1000px; margin: 0 auto; }
+    .code-block {
+      background: #060a12; border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.5);
+    }
+    .code-header { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 1.25rem; background: var(--surface); border-bottom: 1px solid var(--border); }
+    .code-dots { display: flex; gap: 6px; }
+    .code-dot { width: 12px; height: 12px; border-radius: 50%; }
+    .code-dot:nth-child(1) { background: #ff5f57; }
+    .code-dot:nth-child(2) { background: #febc2e; }
+    .code-dot:nth-child(3) { background: #28c840; }
+    .code-filename { font-family: var(--mono); font-size: 0.78rem; color: var(--text3); }
+    .code-copy { font-family: var(--mono); font-size: 0.75rem; color: var(--text3); cursor: pointer; background: none; border: none; transition: color 0.2s; }
+    .code-copy:hover { color: var(--accent); }
+    .code-body { padding: 1.5rem; overflow-x: auto; }
+    .code-body pre { font-family: var(--mono); font-size: 0.85rem; line-height: 1.8; color: var(--text2); }
+    .c-key { color: #79c0ff; }
+    .c-str { color: #a5d6ff; }
+    .c-val { color: var(--accent); }
+    .c-comment { color: var(--text3); }
+    .c-fn { color: #d2a8ff; }
+    .c-kw { color: #ff7b72; }
+
+    /* BLOG PREVIEW */
+    .blog-section { padding: 5rem 2rem; background: var(--bg2); }
+    .blog-inner { max-width: 1200px; margin: 0 auto; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+    .blog-card {
+      background: var(--bg3); border: 1px solid var(--border); border-radius: 12px;
+      overflow: hidden; transition: transform 0.2s, border-color 0.2s; text-decoration: none; color: inherit;
+      display: flex; flex-direction: column;
+    }
+    .blog-card:hover { transform: translateY(-4px); border-color: rgba(0,153,255,0.4); }
+    .blog-thumb {
+      height: 160px; display: flex; align-items: center; justify-content: center;
+      font-size: 3rem; position: relative; overflow: hidden;
+    }
+    .blog-thumb-1 { background: linear-gradient(135deg, #0f1521 0%, #1a2550 100%); }
+    .blog-thumb-2 { background: linear-gradient(135deg, #0f1521 0%, #1a3530 100%); }
+    .blog-thumb-3 { background: linear-gradient(135deg, #0f1521 0%, #2a1a35 100%); }
+    .blog-thumb-4 { background: linear-gradient(135deg, #0f1521 0%, #2a1a1a 100%); }
+    .blog-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .blog-cat { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.6rem; }
+    .blog-title { font-size: 1.05rem; font-weight: 700; line-height: 1.4; margin-bottom: 0.6rem; }
+    .blog-excerpt { font-size: 0.85rem; color: var(--text2); line-height: 1.6; font-family: var(--serif); flex: 1; }
+    .blog-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; }
+    .blog-date { font-family: var(--mono); font-size: 0.72rem; color: var(--text3); }
+    .blog-read { font-size: 0.78rem; color: var(--accent2); font-weight: 600; }
+
+    /* FAQ */
+    .faq-section { padding: 5rem 2rem; max-width: 800px; margin: 0 auto; }
+    .faq-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .faq-item { background: var(--surface); }
+    .faq-q {
+      width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+      padding: 1.25rem 1.5rem; color: var(--text); font-family: var(--sans);
+      font-size: 0.95rem; font-weight: 600; display: flex; justify-content: space-between;
+      align-items: center; gap: 1rem; transition: background 0.2s;
+    }
+    .faq-q:hover { background: var(--surface2); }
+    .faq-arrow { color: var(--accent); font-size: 1.1rem; transition: transform 0.3s; flex-shrink: 0; }
+    .faq-item.open .faq-arrow { transform: rotate(45deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0 1.5rem; font-family: var(--serif); font-size: 0.9rem; color: var(--text2); line-height: 1.7;
+    }
+    .faq-item.open .faq-a { max-height: 300px; padding: 0 1.5rem 1.25rem; }
+
+    /* CTA BANNER */
+    .cta-banner {
+      padding: 5rem 2rem; text-align: center;
+      background: linear-gradient(135deg, rgba(0,229,160,0.05) 0%, rgba(0,153,255,0.05) 100%);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .cta-banner h2 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem; }
+    .cta-banner h2 em { font-style: normal; color: var(--accent); }
+    .cta-banner p { color: var(--text2); font-family: var(--serif); font-size: 1.05rem; max-width: 500px; margin: 0 auto 2rem; }
+
+    /* FOOTER */
+    footer {
+      background: var(--bg2); border-top: 1px solid var(--border);
+      padding: 4rem 2rem 2rem;
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand .nav-logo { font-size: 1.3rem; display: block; margin-bottom: 0.75rem; }
+    .footer-brand p { font-size: 0.875rem; color: var(--text3); line-height: 1.6; max-width: 260px; font-family: var(--serif); }
+    .footer-col h4 { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col a { color: var(--text2); font-size: 0.875rem; text-decoration: none; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: 0.8rem; color: var(--text3); font-family: var(--mono); }
+
+    /* LOADING SPINNER */
+    .loading { display: flex; align-items: center; justify-content: center; padding: 4rem; gap: 0.75rem; color: var(--text3); font-family: var(--mono); font-size: 0.875rem; }
+    .spinner { width: 24px; height: 24px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; }
+    @keyframes spin { to{transform:rotate(360deg)} }
+
+    /* NO RESULTS */
+    .no-results { text-align: center; padding: 4rem; color: var(--text2); }
+    .no-results .emoji { font-size: 3rem; margin-bottom: 1rem; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1/-1; }
+    }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .nav-mobile-btn { display: block; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 1.5rem; }
+    }
+
+    /* TOAST */
+    .toast {
+      position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+      background: var(--accent); color: #0a0e17; padding: 0.75rem 1.25rem;
+      border-radius: 8px; font-weight: 700; font-size: 0.875rem;
+      transform: translateY(100px); opacity: 0; transition: all 0.3s; pointer-events: none;
+    }
+    .toast.show { transform: none; opacity: 1; }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--text3); }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="/" class="nav-logo">API<span>Testing</span>Free</a>
+  <ul class="nav-links">
+    <li><a href="#apis">Browse APIs</a></li>
+    <li><a href="apis.html">All APIs</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="tools/">HTTP Client</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="#apis" class="nav-cta">Explore Free APIs →</a>
+  <button class="nav-mobile-btn" onclick="toggleMobileNav()">☰</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-badge">✦ 1,500+ Free Public APIs Curated for Developers</div>
+    <h1>
+      The Best <em>Free APIs for Testing</em>
+      <span class="line2">No Credit Card. No Rate Limit Anxiety. Just Build.</span>
+    </h1>
+    <p class="hero-desc">
+      Find free public APIs for testing, prototyping, and learning. Browse hundreds of endpoints across 40+ categories — from animals and weather to finance and AI. Most require no API key.
+    </p>
+    <div class="hero-actions">
+      <a href="#apis" class="btn-primary">Browse Free APIs</a>
+      <a href="tools/" class="btn-secondary">🌐 Test APIs Online →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num" id="statCount">1,563</div><div class="stat-label">Total APIs</div></div>
+      <div class="stat"><div class="stat-num">40+</div><div class="stat-label">Categories</div></div>
+      <div class="stat"><div class="stat-num">800+</div><div class="stat-label">No Key Required</div></div>
+      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Free to Use</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH -->
+<section class="search-section">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="Search APIs — e.g. weather, dogs, jokes, crypto..." autocomplete="off" />
+    <button class="search-btn" onclick="performSearch()">Search</button>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<div class="categories-strip">
+  <div class="section-label">Browse by category</div>
+  <div class="cats-scroll" id="categoryPills">
+    <span class="cat-pill active" onclick="filterCategory('all', this)">All Categories</span>
+  </div>
+</div>
+
+<!-- API DIRECTORY -->
+<section class="apis-section" id="apis">
+  <div class="section-header">
+    <h2 class="section-title">Free Public APIs <span id="catTitle">— All Categories</span></h2>
+    <span class="results-count" id="resultsCount">Loading...</span>
+  </div>
+
+  <div class="filters-bar">
+    <select class="filter-select" id="authFilter" onchange="applyFilters()">
+      <option value="all">All Auth Types</option>
+      <option value="none">No Key Required</option>
+      <option value="apiKey">API Key</option>
+      <option value="OAuth">OAuth</option>
+    </select>
+    <select class="filter-select" id="httpsFilter" onchange="applyFilters()">
+      <option value="all">HTTP & HTTPS</option>
+      <option value="true">HTTPS Only</option>
+    </select>
+    <select class="filter-select" id="corsFilter" onchange="applyFilters()">
+      <option value="all">Any CORS</option>
+      <option value="yes">CORS Enabled</option>
+    </select>
+    <span class="filter-chip active" id="chip-free" onclick="toggleChip('free', this)">🔓 Free / No Key</span>
+    <span class="filter-chip" id="chip-https" onclick="toggleChip('https', this)">🔒 HTTPS</span>
+    <span class="filter-chip" id="chip-cors" onclick="toggleChip('cors', this)">🌐 CORS</span>
+  </div>
+
+  <div id="apiGrid" class="api-grid">
+    <div class="loading"><div class="spinner"></div> Loading APIs...</div>
+  </div>
+  <div class="pagination" id="pagination"></div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section">
+  <div class="features-inner">
+    <h2 class="features-heading">Why Developers Love <em style="color:var(--accent)">APITestingFree</em></h2>
+    <p class="features-sub">We curate only the best free public APIs so you can focus on building, learning, and prototyping — not hunting for working endpoints.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <div class="feature-title">Online HTTP Client — Test APIs Instantly</div>
+        <p class="feature-body">Our free online HTTP request tester lets you send GET, POST, PUT, DELETE requests directly in your browser. Like an online curl or fetch tool — no install, no signup. <a href="tools/" style="color:var(--accent2)">Try the tool →</a></p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-title">Instant Access — No Signup</div>
+        <p class="feature-body">Hundreds of free API endpoints are available immediately with no registration, no credit card, and no waiting. Perfect for rapid prototyping and learning REST APIs.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🗂️</div>
+        <div class="feature-title">40+ Curated Categories</div>
+        <p class="feature-body">From Animals and Weather to Blockchain and Machine Learning, every category is hand-curated and verified. Find the right free test API in seconds.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <div class="feature-title">Powerful Search & Filters</div>
+        <p class="feature-body">Filter by authentication type, HTTPS support, CORS headers, and more. Find the exact free REST API for testing that fits your project's requirements.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📖</div>
+        <div class="feature-title">Beginner-Friendly Guides</div>
+        <p class="feature-body">Our blog covers tutorials on how to use free public APIs for testing — with code examples in JavaScript, Python, and curl for every skill level.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔄</div>
+        <div class="feature-title">Always Up-to-Date</div>
+        <p class="feature-body">Our directory pulls from the community-maintained public-apis repository, ensuring links stay fresh and descriptions remain accurate for developers worldwide.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌍</div>
+        <div class="feature-title">Global Developer Community</div>
+        <p class="feature-body">Backed by a community of 300,000+ developers on GitHub. Every API listing is reviewed for quality, security, and reliability before being included.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR APIs -->
+<section class="popular-section">
+  <div class="section-label">Hand-picked for beginners</div>
+  <h2 class="section-title" style="font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:0.5rem">Most Popular <span style="color:var(--accent)">Free Test APIs</span></h2>
+  <p style="color:var(--text2);font-family:var(--serif);margin-bottom:2.5rem;max-width:540px">These free public APIs are the most commonly used for learning, prototyping, and testing. No API key required.</p>
+  <div class="popular-grid">
+    <div class="popular-card">
+      <div class="popular-num">01 — Animals</div>
+      <div class="popular-name">Dog CEO API</div>
+      <p class="popular-desc">Get random dog images grouped by breed. One of the most beginner-friendly free APIs with no authentication required and full CORS support.</p>
+      <div class="popular-meta">
+        <span class="badge badge-free">No Key</span>
+        <span class="badge badge-https">HTTPS</span>
+        <span class="badge badge-cors">CORS ✓</span>
+      </div>
+    </div>
+    <div class="popular-card">
+      <div class="popular-num">02 — Entertainment</div>
+      <div class="popular-name">SWAPI – Star Wars</div>
+      <p class="popular-desc">All the Star Wars data you've ever wanted — people, films, starships, vehicles, species, and planets. Completely free, no key needed.</p>
+      <div class="popular-meta">
+        <span class="badge badge-free">No Key</span>
+        <span class="badge badge-https">HTTPS</span>
+        <span class="badge badge-cors">CORS ✓</span>
+      </div>
+    </div>
+    <div class="popular-card">
+      <div class="popular-num">03 — Science</div>
+      <div class="popular-name">NASA Open APIs</div>
+      <p class="popular-desc">Access astronomy picture of the day, Mars rover photos, near Earth objects, and more from NASA. Free API key available with generous rate limits.</p>
+      <div class="popular-meta">
+        <span class="badge badge-auth">API Key</span>
+        <span class="badge badge-https">HTTPS</span>
+      </div>
+    </div>
+    <div class="popular-card">
+      <div class="popular-num">04 — Development</div>
+      <div class="popular-name">JSONPlaceholder</div>
+      <p class="popular-desc">A free fake REST API for testing and prototyping. Serves posts, comments, albums, photos, todos and users. The go-to mock API for frontend developers.</p>
+      <div class="popular-meta">
+        <span class="badge badge-free">No Key</span>
+        <span class="badge badge-https">HTTPS</span>
+        <span class="badge badge-cors">CORS ✓</span>
+      </div>
+    </div>
+    <div class="popular-card">
+      <div class="popular-num">05 — Weather</div>
+      <div class="popular-name">Open-Meteo</div>
+      <p class="popular-desc">Free global weather forecast API for non-commercial use. No API key required, HTTPS and CORS supported. Real hourly forecasts worldwide.</p>
+      <div class="popular-meta">
+        <span class="badge badge-free">No Key</span>
+        <span class="badge badge-https">HTTPS</span>
+        <span class="badge badge-cors">CORS ✓</span>
+      </div>
+    </div>
+    <div class="popular-card">
+      <div class="popular-num">06 — Cryptocurrency</div>
+      <div class="popular-name">CoinGecko API</div>
+      <p class="popular-desc">Real-time crypto prices, market data, and coin details. The public tier is free with no API key required — ideal for crypto portfolio projects.</p>
+      <div class="popular-meta">
+        <span class="badge badge-free">No Key</span>
+        <span class="badge badge-https">HTTPS</span>
+        <span class="badge badge-cors">CORS ✓</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="howto-section">
+  <div class="howto-inner">
+    <div class="section-label">Getting started</div>
+    <h2 style="font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:0.5rem">How to Use a <em style="color:var(--accent)">Free API for Testing</em></h2>
+    <p style="color:var(--text2);font-family:var(--serif);font-size:1rem;max-width:520px">New to APIs? Follow these steps to make your first API call in under 5 minutes using only a browser or terminal.</p>
+    <div class="howto-steps">
+      <div class="howto-step">
+        <div class="step-num">01</div>
+        <div>
+          <div class="step-title">Choose a Free API Endpoint</div>
+          <p class="step-body">Browse our directory and pick an API that matches what you want to build. Filter by "No Key Required" to find free REST APIs for testing you can call immediately without signing up anywhere. Good starting points: Dog API, JSONPlaceholder, Open-Meteo, or SWAPI.</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="step-num">02</div>
+        <div>
+          <div class="step-title">Open the API Documentation</div>
+          <p class="step-body">Click the "View Docs" link on any API card to go to the official documentation. Good documentation will show you the base URL, available endpoints, query parameters, and example responses in JSON format.</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="step-num">03</div>
+        <div>
+          <div class="step-title">Make Your First Request</div>
+          <p class="step-body">Paste the endpoint URL directly in your browser, use curl in your terminal, or write a fetch() call in JavaScript. For free APIs with no key, you'll get a JSON response instantly with no setup required at all.</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="step-num">04</div>
+        <div>
+          <div class="step-title">Parse the JSON Response</div>
+          <p class="step-body">Every modern free public API returns data in JSON format. Use JavaScript's response.json(), Python's requests library, or any HTTP client to parse and work with the data. Build your app, test your frontend, or practice data handling.</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="step-num">05</div>
+        <div>
+          <div class="step-title">Build Something Real</div>
+          <p class="step-body">Chain multiple free APIs together to create a real project — a weather dashboard, a crypto tracker, a fun facts generator. Our blog has step-by-step tutorials for building full projects using only free public APIs for testing and learning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CODE EXAMPLE -->
+<section class="code-section">
+  <div class="section-label">Try it yourself</div>
+  <h2 style="font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin-bottom:0.5rem;letter-spacing:-0.02em">Free API Testing — <em style="color:var(--accent2)">Live Code Examples</em></h2>
+  <p style="color:var(--text2);font-family:var(--serif);margin-bottom:2rem;max-width:540px">Copy any of these examples to make real API calls right now using free public APIs that require no authentication.</p>
+
+  <div class="code-block">
+    <div class="code-header">
+      <div class="code-dots"><div class="code-dot"></div><div class="code-dot"></div><div class="code-dot"></div></div>
+      <span class="code-filename">fetch-free-api.js — JavaScript (No Key Required)</span>
+      <button class="code-copy" onclick="copyCode()">Copy</button>
+    </div>
+    <div class="code-body">
+      <pre id="codeBlock"><span class="c-comment">// Free API for Testing — No API Key Required</span>
+<span class="c-comment">// Example: Fetch a random dog image using the Dog CEO free API</span>
+
+<span class="c-kw">const</span> <span class="c-fn">fetchFreeAPI</span> = <span class="c-kw">async</span> () => {
+  <span class="c-comment">// This free endpoint requires no authentication at all</span>
+  <span class="c-kw">const</span> url = <span class="c-str">'https://dog.ceo/api/breeds/image/random'</span>;
+
+  <span class="c-kw">try</span> {
+    <span class="c-kw">const</span> response = <span class="c-kw">await</span> <span class="c-fn">fetch</span>(url);
+    <span class="c-kw">const</span> data = <span class="c-kw">await</span> response.<span class="c-fn">json</span>();
+
+    <span class="c-comment">// Response: { status: "success", message: "https://..." }</span>
+    console.<span class="c-fn">log</span>(<span class="c-str">'Dog image URL:'</span>, data.message);
+    <span class="c-kw">return</span> data;
+  } <span class="c-kw">catch</span> (error) {
+    console.<span class="c-fn">error</span>(<span class="c-str">'API call failed:'</span>, error);
+  }
+};
+
+<span class="c-fn">fetchFreeAPI</span>();
+
+<span class="c-comment">// ────────────────────────────────────────────</span>
+<span class="c-comment">// More free test APIs to try:</span>
+<span class="c-comment">// JSONPlaceholder: https://jsonplaceholder.typicode.com/posts</span>
+<span class="c-comment">// Open-Meteo:      https://api.open-meteo.com/v1/forecast?latitude=40.71&longitude=-74.01&current_weather=true</span>
+<span class="c-comment">// Cat Facts:       https://catfact.ninja/fact</span>
+<span class="c-comment">// Bored API:       https://www.boredapi.com/api/activity</span></pre>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG PREVIEW -->
+<section class="blog-section">
+  <div class="blog-inner">
+    <div class="section-label">Developer guides & tutorials</div>
+    <h2 style="font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:0.5rem">Learn with Our <em style="color:var(--accent)">Free API Tutorials</em></h2>
+    <p style="color:var(--text2);font-family:var(--serif);font-size:1rem;max-width:520px">In-depth guides on how to use free public APIs for testing, building projects, and practicing your development skills.</p>
+    <div class="blog-grid">
+      <a href="blog/best-free-apis-no-key.html" class="blog-card">
+        <div class="blog-thumb blog-thumb-1">🔓</div>
+        <div class="blog-body">
+          <div class="blog-cat">Beginner Guide</div>
+          <div class="blog-title">15 Best Free APIs That Require No API Key in 2025</div>
+          <p class="blog-excerpt">A hand-picked list of free public APIs you can call right now in your browser — no registration, no credit card, no waiting. Perfect for testing and learning.</p>
+          <div class="blog-footer">
+            <span class="blog-date">Jan 2025 · 8 min read</span>
+            <span class="blog-read">Read →</span>
+          </div>
+        </div>
+      </a>
+      <a href="blog/free-rest-api-testing-guide.html" class="blog-card">
+        <div class="blog-thumb blog-thumb-2">🧪</div>
+        <div class="blog-body">
+          <div class="blog-cat">Tutorial</div>
+          <div class="blog-title">How to Test a REST API for Free — Complete Beginner's Guide</div>
+          <p class="blog-excerpt">Learn what REST APIs are, how HTTP methods work, and how to make your first API call using free tools like Postman, curl, and plain JavaScript fetch.</p>
+          <div class="blog-footer">
+            <span class="blog-date">Feb 2025 · 12 min read</span>
+            <span class="blog-read">Read →</span>
+          </div>
+        </div>
+      </a>
+      <a href="blog/mock-api-vs-real-api.html" class="blog-card">
+        <div class="blog-thumb blog-thumb-3">🔄</div>
+        <div class="blog-body">
+          <div class="blog-cat">Explainer</div>
+          <div class="blog-title">Free Mock API vs Real API — What's the Difference?</div>
+          <p class="blog-excerpt">Understand when to use a free fake API for testing and prototyping versus a real production API. Includes free mock API tools and best practices for frontend developers.</p>
+          <div class="blog-footer">
+            <span class="blog-date">Feb 2025 · 6 min read</span>
+            <span class="blog-read">Read →</span>
+          </div>
+        </div>
+      </a>
+      <a href="blog/build-weather-app-free-api.html" class="blog-card">
+        <div class="blog-thumb blog-thumb-4">🌤️</div>
+        <div class="blog-body">
+          <div class="blog-cat">Project Tutorial</div>
+          <div class="blog-title">Build a Weather App Using Only Free Public APIs</div>
+          <p class="blog-excerpt">Step-by-step tutorial to build a real weather dashboard using Open-Meteo (free, no key) and a geolocation API. Complete JavaScript source code included.</p>
+          <div class="blog-footer">
+            <span class="blog-date">Mar 2025 · 15 min read</span>
+            <span class="blog-read">Read →</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a href="blog.html" class="btn-secondary">View All Articles →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-label">Common questions</div>
+  <h2 style="font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:0.5rem">Frequently Asked Questions</h2>
+  <p style="color:var(--text2);font-family:var(--serif);font-size:1rem;max-width:520px">Everything you need to know about using free APIs for testing and learning.</p>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        What is a free API for testing? <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-a">A free API for testing is a publicly accessible web service that returns data in response to HTTP requests — at no cost. These APIs are perfect for developers who want to practice making API calls, build prototypes, or test frontend interfaces without needing to pay or sign up. Most free test APIs return data in JSON format and are available over HTTPS. Our directory lists over 1,500 such APIs across 40+ categories.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Which free APIs don't require an API key? <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-a">Over 800 APIs in our directory require no API key — you can simply call the endpoint URL directly. Popular keyless free APIs include: Dog CEO (random dog images), JSONPlaceholder (fake REST data), Open-Meteo (weather forecasts), Cat Facts, SWAPI (Star Wars), PokéAPI, and the Open Library API. Use the "No Key Required" filter on our Browse page to see all of them instantly.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        How do I test an API for free without any tools? <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-a">The simplest way to test a free REST API is to paste the URL directly into your browser's address bar. For example, visit https://dog.ceo/api/breeds/image/random and you'll see a JSON response instantly. For POST requests or more advanced testing, use free tools like Postman (free tier), Insomnia, or the curl command in your terminal. All of these are free to use for API testing.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        What is a free mock API and when should I use one? <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-a">A free mock API is a fake API server that simulates real API responses without connecting to a live backend. Services like JSONPlaceholder, MockAPI.io, and Mockaroo provide free mock API endpoints for testing. Use mock APIs when: you're building a frontend before the backend is ready, you want predictable test data, or you need to simulate API errors and edge cases during development.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Are these free public APIs safe to use? <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-a">Yes — all APIs listed in our directory are sourced from the community-maintained public-apis GitHub repository with 300,000+ stars. We only include APIs that use HTTPS by default and are widely used by the developer community. However, always read an API's terms of service before using it in a production application, and never send personal or sensitive data to a free public test API.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        What's the best free API to practice with as a beginner? <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-a">For absolute beginners, we recommend starting with JSONPlaceholder (https://jsonplaceholder.typicode.com) — it's a free fake REST API that returns realistic-looking data for posts, users, and comments with no setup at all. After that, try the Dog CEO API for image data, PokéAPI for complex nested JSON, and Open-Meteo for real-world weather data. All are completely free, require no API key, and have excellent documentation.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Can I use these free APIs in a production app? <span class="faq-arrow">+</span>
+      </button>
+      <div class="faq-a">Some of these APIs are production-ready (like OpenWeatherMap with a free tier, CoinGecko, and REST Countries), but most "no-key" APIs are primarily intended for learning, testing, and prototyping. For production applications that need reliability, uptime guarantees, and higher rate limits, we recommend checking if the API offers a paid tier or subscribing to an API management platform like APILayer.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ONLINE HTTP CLIENT PROMO -->
+<section style="padding:5rem 2rem;background:var(--bg3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
+    <div>
+      <div class="section-label">Free developer tool</div>
+      <h2 style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:0.75rem;line-height:1.15">Online HTTP Client &amp; <em style="color:var(--accent);font-style:normal">API Tester</em></h2>
+      <p style="color:var(--text2);font-family:var(--serif);font-size:1rem;line-height:1.8;margin-bottom:1.5rem;max-width:460px">Send GET, POST, PUT, DELETE requests right in your browser — no Postman, no curl installation needed. The free online HTTP request tool for developers: test any REST API instantly with headers, auth, JSON body, and curl export.</p>
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+        <a href="tools/" class="btn-primary">Open HTTP Client →</a>
+        <a href="tools/" class="btn-secondary">Online curl tool</a>
+      </div>
+      <div style="display:flex;gap:1.5rem;margin-top:2rem;flex-wrap:wrap">
+        <div style="font-family:var(--mono);font-size:0.75rem;color:var(--text3)">✓ Online curl tool</div>
+        <div style="font-family:var(--mono);font-size:0.75rem;color:var(--text3)">✓ Online fetch API test</div>
+        <div style="font-family:var(--mono);font-size:0.75rem;color:var(--text3)">✓ Bearer / API Key auth</div>
+        <div style="font-family:var(--mono);font-size:0.75rem;color:var(--text3)">✓ JSON syntax highlighting</div>
+      </div>
+    </div>
+    <div>
+      <div style="background:#060a12;border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 8px 48px rgba(0,0,0,0.5)">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:0.85rem 1.25rem;background:var(--surface);border-bottom:1px solid var(--border)">
+          <div style="display:flex;gap:6px"><div style="width:11px;height:11px;border-radius:50%;background:#ff5f57"></div><div style="width:11px;height:11px;border-radius:50%;background:#febc2e"></div><div style="width:11px;height:11px;border-radius:50%;background:#28c840"></div></div>
+          <span style="font-family:var(--mono);font-size:0.72rem;color:var(--text3)">online-http-client.js — apitestingfree.com/tools</span>
+        </div>
+        <div style="padding:1.25rem;font-family:var(--mono);font-size:0.8rem;line-height:1.8;color:var(--text2)">
+          <span style="color:var(--text3)">// Online fetch API test — no install needed</span><br>
+          <span style="color:#ff7b72">const</span> <span style="color:#d2a8ff">testAPI</span> = <span style="color:#ff7b72">async</span> () => {<br>
+          &nbsp;&nbsp;<span style="color:#ff7b72">const</span> res = <span style="color:#ff7b72">await</span> <span style="color:#d2a8ff">fetch</span>(<span style="color:#a5d6ff">'https://dog.ceo/api/breeds/image/random'</span>);<br>
+          &nbsp;&nbsp;<span style="color:#ff7b72">const</span> data = <span style="color:#ff7b72">await</span> res.<span style="color:#d2a8ff">json</span>();<br>
+          &nbsp;&nbsp;console.<span style="color:#d2a8ff">log</span>(data.message); <span style="color:var(--text3)">// dog image URL</span><br>
+          };<br><br>
+          <span style="color:var(--text3)">// ✓ Status: 200 OK — 142 ms — 0.1 KB</span><br>
+          <span style="color:var(--accent)">// → {"status":"success","message":"https://..."}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Start Testing Free APIs <em>Right Now</em></h2>
+  <p>Browse 1,500+ free public APIs organized by category. No account needed. Just click and start building.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+    <a href="#apis" class="btn-primary">Browse All APIs ↑</a>
+    <a href="apis.html" class="btn-secondary">Full API Directory →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">API<span>Testing</span>Free</a>
+        <p>The largest free directory of public APIs for testing, learning, and prototyping. Curated for developers of all skill levels.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Browse APIs</h4>
+        <ul>
+          <li><a href="categories.html">All Categories</a></li>
+          <li><a href="apis.html?filter=no-key">No Key Required</a></li>
+          <li><a href="apis.html?filter=cors">CORS Enabled</a></li>
+          <li><a href="apis.html?cat=Animals">Animals APIs</a></li>
+          <li><a href="apis.html?cat=Weather">Weather APIs</a></li>
+          <li><a href="apis.html?cat=Finance">Finance APIs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="tools/">Online HTTP Client</a></li>
+          <li><a href="blog.html">Blog & Tutorials</a></li>
+          <li><a href="blog/best-free-apis-no-key.html">Best Free APIs</a></li>
+          <li><a href="blog/free-rest-api-testing-guide.html">REST API Guide</a></li>
+          <li><a href="blog/build-weather-app-free-api.html">Project Tutorials</a></li>
+          <li><a href="blog/mock-api-vs-real-api.html">Mock API Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="tools/">Free HTTP Client Tool</a></li>
+          <li><a href="submit.html">Submit an API</a></li>
+          <li><a href="sitemap.xml">Sitemap</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 APITestingFree.com — The free API directory for developers</p>
+      <p>Data sourced from the <a href="https://github.com/public-apis/public-apis" style="color:var(--accent);text-decoration:none">public-apis</a> community repository</p>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Copied to clipboard!</div>
+
+<script>
+  // ─── DATA LOADING ────────────────────────────────────
+  let allApis = [];
+  let filteredApis = [];
+  let currentPage = 1;
+  const PER_PAGE = 24;
+  let activeCategory = 'all';
+  let activeChips = { free: true, https: false, cors: false };
+
+  async function loadApis() {
+    try {
+      const res = await fetch('https://raw.githubusercontent.com/public-apis-dev/public-apis/main/db/resources.json');
+      const data = await res.json();
+      allApis = data.entries || [];
+      document.getElementById('statCount').textContent = allApis.length.toLocaleString();
+      buildCategories();
+      applyFilters();
+    } catch (e) {
+      document.getElementById('apiGrid').innerHTML = `
+        <div class="no-results" style="grid-column:1/-1">
+          <div class="emoji">⚠️</div>
+          <p>Could not load API data. Please refresh the page.</p>
+        </div>`;
+    }
+  }
+
+  function buildCategories() {
+    const cats = [...new Set(allApis.map(a => a.Category))].sort();
+    const container = document.getElementById('categoryPills');
+    cats.forEach(cat => {
+      const el = document.createElement('span');
+      el.className = 'cat-pill';
+      el.textContent = cat;
+      el.onclick = () => filterCategory(cat, el);
+      container.appendChild(el);
+    });
+  }
+
+  function filterCategory(cat, el) {
+    activeCategory = cat;
+    currentPage = 1;
+    document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+    el.classList.add('active');
+    const title = document.getElementById('catTitle');
+    title.textContent = cat === 'all' ? '— All Categories' : `— ${cat}`;
+    applyFilters();
+    document.getElementById('apis').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function applyFilters() {
+    const auth = document.getElementById('authFilter').value;
+    const https = document.getElementById('httpsFilter').value;
+    const cors = document.getElementById('corsFilter').value;
+    const search = document.getElementById('searchInput').value.toLowerCase().trim();
+
+    filteredApis = allApis.filter(api => {
+      if (activeCategory !== 'all' && api.Category !== activeCategory) return false;
+      if (auth === 'none' && api.Auth !== '') return false;
+      if (auth === 'apiKey' && api.Auth !== 'apiKey') return false;
+      if (auth === 'OAuth' && api.Auth !== 'OAuth') return false;
+      if (https === 'true' && !api.HTTPS) return false;
+      if (cors === 'yes' && api.Cors?.toLowerCase() !== 'yes') return false;
+      if (activeChips.free && api.Auth !== '') return false;
+      if (activeChips.https && !api.HTTPS) return false;
+      if (activeChips.cors && api.Cors?.toLowerCase() !== 'yes') return false;
+      if (search) {
+        const haystack = `${api.API} ${api.Description} ${api.Category}`.toLowerCase();
+        if (!haystack.includes(search)) return false;
+      }
+      return true;
+    });
+
+    currentPage = 1;
+    renderApis();
+    renderPagination();
+  }
+
+  function performSearch() {
+    applyFilters();
+    document.getElementById('apis').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  document.getElementById('searchInput').addEventListener('keydown', e => {
+    if (e.key === 'Enter') performSearch();
+  });
+
+  function toggleChip(key, el) {
+    activeChips[key] = !activeChips[key];
+    el.classList.toggle('active', activeChips[key]);
+    // Sync selects if needed
+    if (key === 'https') document.getElementById('httpsFilter').value = activeChips.https ? 'true' : 'all';
+    if (key === 'cors') document.getElementById('corsFilter').value = activeChips.cors ? 'yes' : 'all';
+    applyFilters();
+  }
+
+  function renderApis() {
+    const start = (currentPage - 1) * PER_PAGE;
+    const page = filteredApis.slice(start, start + PER_PAGE);
+    const grid = document.getElementById('apiGrid');
+    const count = document.getElementById('resultsCount');
+    count.textContent = `${filteredApis.length.toLocaleString()} APIs found`;
+
+    if (page.length === 0) {
+      grid.innerHTML = `<div class="no-results" style="grid-column:1/-1"><div class="emoji">🔍</div><p>No APIs found matching your filters. Try adjusting the search or filters.</p></div>`;
+      return;
+    }
+
+    grid.innerHTML = page.map(api => {
+      const authBadge = api.Auth === ''
+        ? `<span class="badge badge-free">No Key</span>`
+        : `<span class="badge badge-auth">${api.Auth}</span>`;
+      const httpsBadge = api.HTTPS ? `<span class="badge badge-https">HTTPS</span>` : '';
+      const corsBadge = api.Cors?.toLowerCase() === 'yes' ? `<span class="badge badge-cors">CORS</span>` : '';
+      return `
+        <article class="api-card" itemscope itemtype="https://schema.org/SoftwareApplication">
+          <div class="api-card-top">
+            <div class="api-name" itemprop="name">${escHtml(api.API)}</div>
+            <div class="api-badges">${authBadge}${httpsBadge}${corsBadge}</div>
+          </div>
+          <div class="api-cat">📂 ${escHtml(api.Category)}</div>
+          <p class="api-desc" itemprop="description">${escHtml(api.Description)}</p>
+          <a href="${escHtml(api.Link)}" target="_blank" rel="noopener noreferrer" class="api-link" itemprop="url">
+            View Documentation <span>→</span>
+          </a>
+        </article>`;
+    }).join('');
+  }
+
+  function renderPagination() {
+    const total = Math.ceil(filteredApis.length / PER_PAGE);
+    const pg = document.getElementById('pagination');
+    if (total <= 1) { pg.innerHTML = ''; return; }
+
+    let html = '';
+    if (currentPage > 1) html += `<button class="page-btn" onclick="goPage(${currentPage-1})">← Prev</button>`;
+
+    const range = getPageRange(currentPage, total);
+    range.forEach(p => {
+      if (p === '...') html += `<span class="page-btn" style="cursor:default">…</span>`;
+      else html += `<button class="page-btn ${p === currentPage ? 'active' : ''}" onclick="goPage(${p})">${p}</button>`;
+    });
+
+    if (currentPage < total) html += `<button class="page-btn" onclick="goPage(${currentPage+1})">Next →</button>`;
+    pg.innerHTML = html;
+  }
+
+  function getPageRange(cur, total) {
+    if (total <= 7) return Array.from({length:total},(_,i)=>i+1);
+    if (cur <= 4) return [1,2,3,4,5,'...',total];
+    if (cur >= total-3) return [1,'...',total-4,total-3,total-2,total-1,total];
+    return [1,'...',cur-1,cur,cur+1,'...',total];
+  }
+
+  function goPage(p) {
+    currentPage = p;
+    renderApis();
+    renderPagination();
+    document.getElementById('apis').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function escHtml(s) {
+    if (!s) return '';
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  // ─── FAQ ─────────────────────────────────────────────
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    item.classList.toggle('open');
+  }
+
+  // ─── CODE COPY ────────────────────────────────────────
+  function copyCode() {
+    const text = document.getElementById('codeBlock').innerText;
+    navigator.clipboard.writeText(text).then(() => showToast('Copied to clipboard!'));
+  }
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2500);
+  }
+
+  function toggleMobileNav() {
+    const links = document.querySelector('.nav-links');
+    if (links.style.display === 'flex') {
+      links.style.display = 'none';
+    } else {
+      links.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:#0a0e17;padding:1.5rem 2rem;border-bottom:1px solid #2a3a58;z-index:99;';
+    }
+  }
+
+  // ─── INIT ─────────────────────────────────────────────
+  loadApis();
+</script>
+</body>
+</html>

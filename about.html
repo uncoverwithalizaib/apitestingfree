@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About APITestingFree — The Free API Directory for Developers</title>
+  <meta name="description" content="APITestingFree.com is a free public API directory and developer resource. Learn about our mission to make API testing accessible to every developer worldwide." />
+  <link rel="canonical" href="https://apitestingfree.com/about.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#0a0e17;--bg2:#0f1521;--surface:#1a2336;--border:#2a3a58;--accent:#00e5a0;--accent2:#0099ff;--text:#e8edf5;--text2:#8fa3c0;--text3:#5a7299;--mono:'DM Mono',monospace;--serif:'Lora',serif;--sans:'Syne',sans-serif;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;background:rgba(10,14,23,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+    .nav-logo{font-size:1.15rem;font-weight:800;color:var(--accent);text-decoration:none;}
+    .nav-logo span{color:var(--text2);font-weight:400;}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{color:var(--text2);text-decoration:none;font-size:0.875rem;font-weight:600;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--accent);}
+    .nav-cta{background:var(--accent);color:#0a0e17;padding:0.45rem 1.1rem;border-radius:6px;font-size:0.85rem;font-weight:700;text-decoration:none;}
+    .page-hero{padding:8rem 2rem 4rem;background:var(--bg2);border-bottom:1px solid var(--border);}
+    .page-hero-inner{max-width:760px;margin:0 auto;text-align:center;}
+    .page-hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:1rem;}
+    .page-hero h1 em{font-style:normal;color:var(--accent);}
+    .page-hero p{color:var(--text2);font-family:var(--serif);font-size:1.1rem;line-height:1.8;}
+    .about-main{max-width:760px;margin:0 auto;padding:4rem 2rem 6rem;}
+    h2{font-size:1.5rem;font-weight:800;letter-spacing:-0.02em;margin:3rem 0 1rem;}
+    h2 em{font-style:normal;color:var(--accent);}
+    p{font-family:var(--serif);font-size:0.975rem;color:var(--text2);line-height:1.8;margin-bottom:1rem;}
+    strong{color:var(--text);font-family:var(--sans);}
+    .mission-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0;}
+    .mission-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem;}
+    .mission-icon{font-size:1.75rem;margin-bottom:0.75rem;}
+    .mission-title{font-weight:700;font-size:0.95rem;margin-bottom:0.4rem;}
+    .mission-body{font-size:0.85rem;color:var(--text2);font-family:var(--serif);line-height:1.6;}
+    .data-source{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin:2rem 0;}
+    .data-source a{color:var(--accent2);}
+    footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem;}
+    .footer-bottom{max-width:760px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+    .footer-bottom p{font-size:0.8rem;color:var(--text3);font-family:var(--mono);}
+    @media(max-width:640px){.nav-links{display:none;}.mission-cards{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">API<span>Testing</span>Free</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="apis.html">All APIs</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+  </ul>
+  <a href="apis.html" class="nav-cta">Browse APIs →</a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <h1>About <em>APITestingFree</em></h1>
+    <p>We built the resource we wished existed when we were first learning to work with APIs — a single, well-organized, always-free directory of public APIs you can actually use.</p>
+  </div>
+</div>
+
+<div class="about-main">
+  <h2>Our <em>Mission</em></h2>
+  <p>Learning to build with APIs shouldn't cost money. When you're starting out, you just need working endpoints you can call, real JSON responses to parse, and clear documentation to follow. APITestingFree.com exists to make that as easy as possible.</p>
+  <p>We curate and organize over <strong>1,500 free public APIs</strong> so that developers at every skill level — from someone writing their very first <code style="font-family:var(--mono);background:var(--surface);padding:0.1em 0.3em;border-radius:3px;color:var(--accent)">fetch()</code> call to experienced engineers prototyping a new product — can find exactly what they need without hunting across dozens of disconnected lists and blog posts.</p>
+
+  <div class="mission-cards">
+    <div class="mission-card">
+      <div class="mission-icon">🎓</div>
+      <div class="mission-title">Built for Learning</div>
+      <div class="mission-body">Every page on this site is written with beginners in mind. Our tutorials explain not just what to do, but why — so you actually understand REST APIs, HTTP methods, and JSON, not just how to copy code.</div>
+    </div>
+    <div class="mission-card">
+      <div class="mission-icon">🆓</div>
+      <div class="mission-title">Always Free</div>
+      <div class="mission-body">This directory is free and always will be. We believe access to developer education resources shouldn't depend on your budget. Every API listed, every tutorial written — free.</div>
+    </div>
+    <div class="mission-card">
+      <div class="mission-icon">🔍</div>
+      <div class="mission-title">Curated, Not Scraped</div>
+      <div class="mission-body">Our API database is powered by the community-maintained public-apis GitHub repository, with 300,000+ stars. Entries are reviewed by real developers before inclusion.</div>
+    </div>
+    <div class="mission-card">
+      <div class="mission-icon">📰</div>
+      <div class="mission-title">Practical Content</div>
+      <div class="mission-body">Our blog covers real-world use cases: building weather apps, crypto trackers, quiz games, and portfolio projects — all using free APIs you can find right here in the directory.</div>
+    </div>
+  </div>
+
+  <h2>Data <em>Sources</em></h2>
+  <div class="data-source">
+    <p>Our API directory is sourced from the <a href="https://github.com/public-apis/public-apis" target="_blank" rel="noopener">public-apis GitHub repository</a>, one of the most starred repositories on GitHub with over 300,000 community stars. The repository is maintained by a global community of developers who contribute, verify, and update API listings.</p>
+    <p style="margin:0">All data is fetched live from the community's maintained JSON database, ensuring our directory stays up-to-date as APIs are added, updated, or deprecated by the community.</p>
+  </div>
+
+  <h2>What is a <em>Free API for Testing?</em></h2>
+  <p>A free API for testing is any publicly accessible web service that returns structured data (usually JSON) over HTTP — at zero cost. These APIs are the backbone of modern developer education. They let you practice the most important real-world skills:</p>
+  <ul style="padding-left:1.5rem;font-family:var(--serif);color:var(--text2);font-size:0.975rem;line-height:2;list-style:disc;margin-bottom:1rem;">
+    <li>Making HTTP requests (GET, POST, PUT, DELETE)</li>
+    <li>Parsing and working with JSON data structures</li>
+    <li>Handling async operations with Promises and async/await</li>
+    <li>Building dynamic UIs powered by real data</li>
+    <li>Understanding authentication flows (API keys, OAuth)</li>
+    <li>Implementing error handling and loading states</li>
+  </ul>
+  <p>Without free public APIs to practice with, learning these skills would require setting up your own backend server — a significant barrier for beginners. Free test APIs remove that barrier entirely.</p>
+
+  <h2>Contact & <em>Contributions</em></h2>
+  <p>Have an API to suggest? Found a broken link? Want to contribute a tutorial? We welcome community contributions. The underlying API data is maintained through the <a href="https://github.com/public-apis/public-apis" target="_blank" rel="noopener" style="color:var(--accent2)">public-apis GitHub repository</a> — open a pull request there to add or update an API listing.</p>
+  <p>For content suggestions, tutorial requests, or general feedback about APITestingFree.com, use the contact details on our GitHub page.</p>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <p>© 2025 APITestingFree.com</p>
+    <p><a href="index.html" style="color:var(--accent);text-decoration:none">Home</a> · <a href="apis.html" style="color:var(--text3);text-decoration:none">APIs</a> · <a href="blog.html" style="color:var(--text3);text-decoration:none">Blog</a> · <a href="privacy.html" style="color:var(--text3);text-decoration:none">Privacy</a></p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Fetch API Tutorial — Call Free APIs with No Setup 2025 | APITestingFree</title>
+  <meta name="description" content="Master the JavaScript Fetch API using real free endpoints. Covers async/await, error handling, JSON parsing, query parameters, POST requests, and common pitfalls. No backend required." />
+  <meta name="keywords" content="javascript fetch api tutorial, fetch api free api, javascript api call tutorial, async await api javascript, fetch json javascript, javascript rest api call beginner 2025" />
+  <link rel="canonical" href="https://apitestingfree.com/blog/javascript-fetch-free-api.html" />
+  <meta property="og:title" content="JavaScript Fetch API Tutorial — Call Free APIs with No Setup 2025" />
+  <meta property="og:description" content="Master JavaScript's Fetch API with real free endpoints. Async/await, error handling, and JSON parsing explained." />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "JavaScript Fetch API Tutorial — Call Free APIs with No Setup 2025",
+    "description": "Complete guide to JavaScript's Fetch API using real free public endpoints. Covers async/await, error handling, JSON parsing, POST requests, and common mistakes.",
+    "author": { "@type": "Organization", "name": "APITestingFree" },
+    "publisher": { "@type": "Organization", "name": "APITestingFree", "url": "https://apitestingfree.com" },
+    "datePublished": "2025-04-08",
+    "dateModified": "2025-04-20",
+    "url": "https://apitestingfree.com/blog/javascript-fetch-free-api.html",
+    "keywords": "javascript fetch api, async await, free api javascript, json parsing, REST api javascript"
+  }
+  </script>
+  <style>
+    :root{--bg:#0a0e17;--bg2:#0f1521;--bg3:#141c2e;--surface:#1a2336;--surface2:#1f2b42;--border:#2a3a58;--accent:#00e5a0;--accent2:#0099ff;--accent3:#ff6b35;--text:#e8edf5;--text2:#8fa3c0;--text3:#5a7299;--mono:'DM Mono',monospace;--serif:'Lora',serif;--sans:'Syne',sans-serif;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;background:rgba(10,14,23,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+    .nav-logo{font-size:1.15rem;font-weight:800;color:var(--accent);text-decoration:none;}
+    .nav-logo span{color:var(--text2);font-weight:400;}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{color:var(--text2);text-decoration:none;font-size:0.875rem;font-weight:600;transition:color 0.2s;}
+    .nav-links a:hover{color:var(--accent);}
+    .nav-cta{background:var(--accent);color:#0a0e17;padding:0.45rem 1.1rem;border-radius:6px;font-size:0.85rem;font-weight:700;text-decoration:none;}
+    .article-layout{max-width:1100px;margin:0 auto;padding:6rem 2rem 5rem;display:grid;grid-template-columns:1fr 280px;gap:4rem;align-items:start;}
+    article{min-width:0;}
+    .breadcrumb{font-family:var(--mono);font-size:0.75rem;color:var(--text3);margin-bottom:1.5rem;}
+    .breadcrumb a{color:var(--text3);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--accent);}
+    .art-cat{font-family:var(--mono);font-size:0.72rem;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;}
+    .art-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin-bottom:1.25rem;}
+    .art-title em{font-style:normal;color:var(--accent);}
+    .art-meta{display:flex;gap:1.5rem;font-family:var(--mono);font-size:0.75rem;color:var(--text3);margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border);flex-wrap:wrap;}
+    .art-meta strong{color:var(--text2);}
+    .art-intro{font-family:var(--serif);font-size:1.1rem;line-height:1.8;color:var(--text2);margin-bottom:2.5rem;padding:1.5rem;background:rgba(0,229,160,0.05);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;}
+    h2{font-size:1.4rem;font-weight:800;margin:2.5rem 0 1rem;letter-spacing:-0.02em;}
+    h2 em{font-style:normal;color:var(--accent);}
+    h3{font-size:1.1rem;font-weight:700;margin:1.75rem 0 0.5rem;color:var(--accent);}
+    p{font-family:var(--serif);font-size:0.975rem;line-height:1.8;color:var(--text2);margin-bottom:1rem;}
+    strong{color:var(--text);font-family:var(--sans);}
+    a{color:var(--accent2);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    code{font-family:var(--mono);font-size:0.85em;background:var(--surface);padding:0.15em 0.4em;border-radius:4px;color:var(--accent);}
+    pre{background:#060a12;border:1px solid var(--border);border-radius:10px;padding:1.5rem;overflow-x:auto;margin:1.5rem 0;}
+    pre code{background:none;padding:0;font-size:0.85rem;line-height:1.8;color:var(--text2);}
+    .c-key{color:#79c0ff;}.c-str{color:#a5d6ff;}.c-val{color:#00e5a0;}.c-comment{color:#5a7299;}.c-kw{color:#ff7b72;}.c-fn{color:#d2a8ff;}.c-err{color:#ff5050;}
+    .callout{background:rgba(0,153,255,0.07);border:1px solid rgba(0,153,255,0.25);border-radius:10px;padding:1.25rem 1.5rem;margin:2rem 0;}
+    .callout-title{font-weight:700;color:var(--accent2);margin-bottom:0.4rem;font-size:0.9rem;}
+    .callout p{margin:0;font-size:0.875rem;}
+    .callout-green{background:rgba(0,229,160,0.05);border-color:rgba(0,229,160,0.3);}
+    .callout-green .callout-title{color:var(--accent);}
+    .callout-red{background:rgba(255,80,80,0.07);border-color:rgba(255,80,80,0.3);}
+    .callout-red .callout-title{color:#ff5050;}
+    .toc{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:2rem;}
+    .toc-title{font-size:0.875rem;font-weight:700;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);}
+    .toc ol{padding-left:1.25rem;display:flex;flex-direction:column;gap:0.35rem;}
+    .toc a{color:var(--text2);font-size:0.85rem;text-decoration:none;font-family:var(--serif);}
+    .toc a:hover{color:var(--accent);}
+    aside{position:sticky;top:80px;}
+    .sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin-bottom:1.25rem;}
+    .sidebar-title{font-size:0.85rem;font-weight:700;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);}
+    .sidebar-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+    .sidebar-list a{color:var(--text2);text-decoration:none;font-size:0.82rem;font-family:var(--serif);transition:color 0.2s;line-height:1.4;display:block;}
+    .sidebar-list a:hover{color:var(--accent);}
+    footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem;}
+    .footer-bottom{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+    .footer-bottom p{font-size:0.8rem;color:var(--text3);font-family:var(--mono);}
+    @media(max-width:860px){.article-layout{grid-template-columns:1fr;}.nav-links{display:none;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo">API<span>Testing</span>Free</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../apis.html">All APIs</a></li>
+    <li><a href="../blog.html" class="active">Blog</a></li>
+    <li><a href="../categories.html">Categories</a></li>
+    <li><a href="../about.html">About</a></li>
+  </ul>
+  <a href="../apis.html" class="nav-cta">Browse Free APIs →</a>
+</nav>
+
+<div class="article-layout">
+  <article itemscope itemtype="https://schema.org/BlogPosting">
+    <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../blog.html">Blog</a> / JavaScript Fetch Tutorial</div>
+    <div class="art-cat">JavaScript · Tutorial</div>
+    <h1 class="art-title" itemprop="headline">JavaScript <em>Fetch API</em> Tutorial — Call Free APIs with No Setup</h1>
+    <div class="art-meta">
+      <span>📅 <strong>April 2025</strong></span>
+      <span>⏱ 13 min read</span>
+      <span>🏷️ JavaScript · Fetch · Async/Await</span>
+    </div>
+
+    <p class="art-intro" itemprop="description">The JavaScript Fetch API is the modern, built-in way to make HTTP requests from the browser — no libraries, no npm installs, no setup required. In this tutorial, you'll go from zero to confidently calling free public APIs using fetch() with async/await, properly handling errors, parsing JSON, passing query parameters, and making POST requests. Every code example uses a real free API you can run right now.</p>
+
+    <div class="toc">
+      <div class="toc-title">📋 Table of Contents</div>
+      <ol>
+        <li><a href="#what-is-fetch">What is the Fetch API?</a></li>
+        <li><a href="#basic-get">Basic GET Request</a></li>
+        <li><a href="#async-await">Async/Await Pattern (Recommended)</a></li>
+        <li><a href="#error-handling">Proper Error Handling</a></li>
+        <li><a href="#query-params">Passing Query Parameters</a></li>
+        <li><a href="#json-parsing">Working with JSON Responses</a></li>
+        <li><a href="#post-request">Making POST Requests</a></li>
+        <li><a href="#headers">Adding Headers (API Keys)</a></li>
+        <li><a href="#parallel">Parallel API Calls with Promise.all()</a></li>
+        <li><a href="#mistakes">5 Common Fetch Mistakes</a></li>
+      </ol>
+    </div>
+
+    <h2 id="what-is-fetch">What is the <em>Fetch API?</em></h2>
+    <p>The Fetch API is a modern browser built-in that replaces the older <code>XMLHttpRequest</code> for making HTTP requests. It works in every major browser and Node.js 18+. The key thing to understand about fetch is that it's <strong>asynchronous</strong> — it returns a Promise that resolves when the response arrives, rather than blocking execution while waiting.</p>
+    <p>You don't need to install anything. Open your browser's DevTools console (F12 → Console) and type <code>fetch</code> — if it returns <code>ƒ fetch()</code>, it's available. Every modern browser has it.</p>
+
+    <h2 id="basic-get">Basic <em>GET Request</em></h2>
+    <p>The simplest possible fetch call looks like this. Open your browser console and paste it in:</p>
+    <pre><code><span class="c-comment">// The most basic fetch call — returns a Promise</span>
+<span class="c-fn">fetch</span>(<span class="c-str">'https://dog.ceo/api/breeds/image/random'</span>)
+  .<span class="c-fn">then</span>(response => response.<span class="c-fn">json</span>())
+  .<span class="c-fn">then</span>(data => console.<span class="c-fn">log</span>(data))
+  .<span class="c-fn">catch</span>(error => console.<span class="c-fn">error</span>(error));
+
+<span class="c-comment">// Output: { status: 'success', message: 'https://images.dog.ceo/...' }</span></code></pre>
+    <p>This uses Promise chaining (<code>.then()</code>). The first <code>.then()</code> receives the raw response and calls <code>.json()</code> to parse it (which itself returns another Promise). The second <code>.then()</code> receives the parsed JSON data. The <code>.catch()</code> handles any network errors.</p>
+    <p>While this works, the Promise chain syntax becomes unwieldy with more complex logic. The modern way to write fetch calls is with <strong>async/await</strong>.</p>
+
+    <h2 id="async-await">Async/Await Pattern <em>(Recommended)</em></h2>
+    <p>Async/await is syntactic sugar over Promises that makes asynchronous code read like synchronous code. The <code>await</code> keyword pauses execution until the Promise resolves, then returns the resolved value. You can only use <code>await</code> inside an <code>async</code> function.</p>
+    <pre><code><span class="c-comment">// The recommended way to use fetch — async/await pattern</span>
+<span class="c-kw">const</span> <span class="c-fn">getDogImage</span> = <span class="c-kw">async</span> () => {
+  <span class="c-kw">const</span> response = <span class="c-kw">await</span> <span class="c-fn">fetch</span>(<span class="c-str">'https://dog.ceo/api/breeds/image/random'</span>);
+  <span class="c-kw">const</span> data = <span class="c-kw">await</span> response.<span class="c-fn">json</span>();
+  console.<span class="c-fn">log</span>(data.message); <span class="c-comment">// The image URL</span>
+};
+
+<span class="c-fn">getDogImage</span>(); <span class="c-comment">// Call the async function</span></code></pre>
+    <p>This reads top-to-bottom like normal code, with no nested callbacks or chains. Every <code>await</code> pauses the function and waits for the result before moving to the next line. This is how professional JavaScript developers write API calls in 2025.</p>
+
+    <h2 id="error-handling">Proper <em>Error Handling</em></h2>
+    <p>This is the most commonly skipped step that causes production bugs. Fetch has a quirk: <strong>it only rejects the Promise on network failures</strong> (no internet, DNS failure, etc.). HTTP errors like 404 or 500 don't throw — the Promise resolves successfully, but <code>response.ok</code> is false.</p>
+    <pre><code><span class="c-comment">// WRONG — won't catch HTTP errors (404, 500, etc.)</span>
+<span class="c-kw">try</span> {
+  <span class="c-kw">const</span> response = <span class="c-kw">await</span> <span class="c-fn">fetch</span>(<span class="c-str">'https://jsonplaceholder.typicode.com/posts/999999'</span>);
+  <span class="c-kw">const</span> data = <span class="c-kw">await</span> response.<span class="c-fn">json</span>(); <span class="c-comment">// Returns {} — no error thrown!</span>
+} <span class="c-kw">catch</span> (e) { <span class="c-comment">/* Only catches network failures */</span> }
+
+<span class="c-comment">// CORRECT — always check response.ok before parsing</span>
+<span class="c-kw">const</span> <span class="c-fn">safeFetch</span> = <span class="c-kw">async</span> (url) => {
+  <span class="c-kw">try</span> {
+    <span class="c-kw">const</span> response = <span class="c-kw">await</span> <span class="c-fn">fetch</span>(url);
+
+    <span class="c-comment">// Manually throw for HTTP errors (4xx, 5xx)</span>
+    <span class="c-kw">if</span> (!response.ok) {
+      <span class="c-kw">throw new</span> <span class="c-fn">Error</span>(<span class="c-str">`HTTP Error: ${response.status} ${response.statusText}`</span>);
+    }
+
+    <span class="c-kw">return</span> response.<span class="c-fn">json</span>(); <span class="c-comment">// Safe to parse now</span>
+
+  } <span class="c-kw">catch</span> (error) {
+    console.<span class="c-fn">error</span>(<span class="c-str">'Fetch failed:'</span>, error.message);
+    <span class="c-kw">throw</span> error; <span class="c-comment">// Re-throw so callers can handle it</span>
+  }
+};
+
+<span class="c-comment">// Usage</span>
+<span class="c-kw">try</span> {
+  <span class="c-kw">const</span> data = <span class="c-kw">await</span> <span class="c-fn">safeFetch</span>(<span class="c-str">'https://dog.ceo/api/breeds/image/random'</span>);
+  console.<span class="c-fn">log</span>(data);
+} <span class="c-kw">catch</span> (e) {
+  <span class="c-comment">// Handle error in UI</span>
+  document.<span class="c-fn">getElementById</span>(<span class="c-str">'error'</span>).textContent = <span class="c-str">'Failed to load data. Try again.'</span>;
+}</code></pre>
+    <p>The <code>safeFetch</code> wrapper pattern above is the professional standard. It checks <code>response.ok</code> (true for 200-299 status codes), throws a meaningful error for HTTP failures, and catches network errors — so your calling code has a single, consistent error handling path.</p>
+
+    <h2 id="query-params">Passing <em>Query Parameters</em></h2>
+    <p>Many free APIs accept query parameters to filter, paginate, or customize the response. The cleanest way to build parameterized URLs is with <code>URLSearchParams</code>:</p>
+    <pre><code><span class="c-comment">// Building URLs with query parameters — the clean way</span>
+<span class="c-kw">const</span> params = <span class="c-kw">new</span> <span class="c-fn">URLSearchParams</span>({
+  ids: <span class="c-str">'bitcoin,ethereum'</span>,
+  vs_currencies: <span class="c-str">'usd,eur'</span>
+});
+
+<span class="c-kw">const</span> url = <span class="c-str">`https://api.coingecko.com/api/v3/simple/price?${params}`</span>;
+<span class="c-kw">const</span> response = <span class="c-kw">await</span> <span class="c-fn">fetch</span>(url);
+<span class="c-kw">const</span> prices = <span class="c-kw">await</span> response.<span class="c-fn">json</span>();
+<span class="c-comment">// { bitcoin: { usd: 65000, eur: 60000 }, ethereum: { ... } }</span>
+
+<span class="c-comment">// URLSearchParams handles special characters automatically</span>
+<span class="c-comment">// e.g., city names like "São Paulo" become "S%C3%A3o%20Paulo"</span>
+<span class="c-kw">const</span> geoParams = <span class="c-kw">new</span> <span class="c-fn">URLSearchParams</span>({ name: <span class="c-str">'São Paulo'</span>, count: <span class="c-str">'1'</span> });
+<span class="c-kw">const</span> geoUrl = <span class="c-str">`https://geocoding-api.open-meteo.com/v1/search?${geoParams}`</span>;</code></pre>
+
+    <h2 id="json-parsing">Working with <em>JSON Responses</em></h2>
+    <p>Once you have the parsed JSON object, you access its data using standard JavaScript property access and array methods:</p>
+    <pre><code><span class="c-comment">// Fetch all posts from JSONPlaceholder free API</span>
+<span class="c-kw">const</span> posts = <span class="c-kw">await</span> (<span class="c-kw">await</span> <span class="c-fn">fetch</span>(<span class="c-str">'https://jsonplaceholder.typicode.com/posts'</span>)).<span class="c-fn">json</span>();
+
+<span class="c-comment">// posts is an array of 100 objects — use standard JS methods:</span>
+console.<span class="c-fn">log</span>(posts.<span class="c-fn">length</span>);           <span class="c-comment">// 100</span>
+console.<span class="c-fn">log</span>(posts[<span class="c-val">0</span>].title);        <span class="c-comment">// First post title</span>
+console.<span class="c-fn">log</span>(posts.<span class="c-fn">filter</span>(p => p.userId === <span class="c-val">1</span>).<span class="c-fn">length</span>); <span class="c-comment">// Posts by user 1</span>
+
+<span class="c-comment">// Display all post titles in the DOM</span>
+<span class="c-kw">const</span> list = document.<span class="c-fn">getElementById</span>(<span class="c-str">'posts-list'</span>);
+list.innerHTML = posts.<span class="c-fn">slice</span>(<span class="c-val">0</span>, <span class="c-val">10</span>)  <span class="c-comment">// First 10</span>
+  .<span class="c-fn">map</span>(post => <span class="c-str">`&lt;li&gt;${post.title}&lt;/li&gt;`</span>)
+  .<span class="c-fn">join</span>(<span class="c-str">''</span>);</code></pre>
+
+    <h2 id="post-request">Making <em>POST Requests</em></h2>
+    <p>GET is the default method. For POST, PUT, PATCH, or DELETE, pass a second options object to fetch:</p>
+    <pre><code><span class="c-comment">// POST request to a free test API</span>
+<span class="c-kw">const</span> newPost = {
+  title: <span class="c-str">'Hello from fetch()'</span>,
+  body: <span class="c-str">'My first POST request'</span>,
+  userId: <span class="c-val">1</span>
+};
+
+<span class="c-kw">const</span> response = <span class="c-kw">await</span> <span class="c-fn">fetch</span>(<span class="c-str">'https://jsonplaceholder.typicode.com/posts'</span>, {
+  method: <span class="c-str">'POST'</span>,
+  headers: {
+    <span class="c-str">'Content-Type'</span>: <span class="c-str">'application/json'</span>  <span class="c-comment">// REQUIRED for JSON body</span>
+  },
+  body: JSON.<span class="c-fn">stringify</span>(newPost)         <span class="c-comment">// Convert object → JSON string</span>
+});
+
+<span class="c-kw">const</span> created = <span class="c-kw">await</span> response.<span class="c-fn">json</span>();
+console.<span class="c-fn">log</span>(created.id);  <span class="c-comment">// 101 — the new post's ID</span>
+console.<span class="c-fn">log</span>(response.status); <span class="c-comment">// 201 Created</span></code></pre>
+    <p>Three things are required for a JSON POST request: set <code>method: 'POST'</code>, add the <code>Content-Type: application/json</code> header (tells the server the body is JSON), and convert your JavaScript object to a JSON string with <code>JSON.stringify()</code>.</p>
+
+    <h2 id="headers">Adding <em>Headers</em> (API Keys)</h2>
+    <p>Some APIs require authentication via a header. The two most common patterns are <code>Authorization: Bearer TOKEN</code> and custom <code>X-Api-Key: YOUR_KEY</code> headers:</p>
+    <pre><code><span class="c-comment">// API key in Authorization header (Bearer token pattern)</span>
+<span class="c-kw">const</span> response = <span class="c-kw">await</span> <span class="c-fn">fetch</span>(<span class="c-str">'https://api.example.com/data'</span>, {
+  headers: {
+    <span class="c-str">'Authorization'</span>: <span class="c-str">'Bearer YOUR_API_TOKEN_HERE'</span>
+  }
+});
+
+<span class="c-comment">// API key as a custom header (some APIs use this pattern)</span>
+<span class="c-kw">const</span> response2 = <span class="c-kw">await</span> <span class="c-fn">fetch</span>(<span class="c-str">'https://api.example.com/data'</span>, {
+  headers: {
+    <span class="c-str">'X-Api-Key'</span>: <span class="c-str">'YOUR_KEY'</span>,
+    <span class="c-str">'Accept'</span>: <span class="c-str">'application/json'</span>  <span class="c-comment">// Request JSON response</span>
+  }
+});
+
+<span class="c-comment">// ⚠️ Never put API keys in client-side code for production apps.</span>
+<span class="c-comment">// Use a backend proxy or environment variables. For learning/testing</span>
+<span class="c-comment">// with free APIs, it's fine to hardcode them temporarily.</span></code></pre>
+
+    <h2 id="parallel">Parallel API Calls with <em>Promise.all()</em></h2>
+    <p>When you need data from multiple endpoints, don't <code>await</code> them one after another — run them in parallel with <code>Promise.all()</code> for a huge performance win:</p>
+    <pre><code><span class="c-comment">// Sequential — SLOW (each request waits for the previous)</span>
+<span class="c-kw">const</span> user = <span class="c-kw">await</span> <span class="c-fn">fetch</span>(<span class="c-str">'.../users/1'</span>).<span class="c-fn">then</span>(r => r.<span class="c-fn">json</span>());
+<span class="c-kw">const</span> posts = <span class="c-kw">await</span> <span class="c-fn">fetch</span>(<span class="c-str">'.../posts?userId=1'</span>).<span class="c-fn">then</span>(r => r.<span class="c-fn">json</span>());
+<span class="c-comment">// Total time: 200ms + 180ms = 380ms</span>
+
+<span class="c-comment">// Parallel — FAST (both requests fire simultaneously)</span>
+<span class="c-kw">const</span> [user, posts] = <span class="c-kw">await</span> Promise.<span class="c-fn">all</span>([
+  <span class="c-fn">fetch</span>(<span class="c-str">'https://jsonplaceholder.typicode.com/users/1'</span>).<span class="c-fn">then</span>(r => r.<span class="c-fn">json</span>()),
+  <span class="c-fn">fetch</span>(<span class="c-str">'https://jsonplaceholder.typicode.com/posts?userId=1'</span>).<span class="c-fn">then</span>(r => r.<span class="c-fn">json</span>())
+]);
+<span class="c-comment">// Total time: ~200ms (limited by the slowest request, not their sum)</span>
+console.<span class="c-fn">log</span>(user.name, posts.<span class="c-fn">length</span>);</code></pre>
+
+    <h2 id="mistakes">5 Common <em>Fetch Mistakes</em></h2>
+    <p><strong>1. Not checking response.ok.</strong> Fetch resolves even on 404/500. Always check <code>if (!response.ok) throw new Error(response.status)</code> before calling <code>.json()</code>.</p>
+    <p><strong>2. Forgetting Content-Type on POST.</strong> Without <code>'Content-Type': 'application/json'</code>, many APIs will reject your POST or fail to parse the body correctly.</p>
+    <p><strong>3. Forgetting JSON.stringify() on the body.</strong> The body option expects a string — passing a plain JavaScript object won't work. Always wrap with <code>JSON.stringify(yourObject)</code>.</p>
+    <p><strong>4. Not handling CORS errors.</strong> If you get a "Access-Control-Allow-Origin" error, the API doesn't allow browser-to-API calls. You'll need to call it from a backend instead. Check our <a href="test-api-without-key.html">no-key API list</a> — all entries with CORS ✓ work from the browser.</p>
+    <p><strong>5. Calling fetch in a non-async function with await.</strong> If you get "SyntaxError: await is only valid in async functions", wrap your code in an <code>async function</code> or use an IIFE: <code>(async () => { await fetch(...); })()</code>.</p>
+
+    <div class="callout callout-green">
+      <div class="callout-title">🚀 Find Free APIs to Practice Fetch With</div>
+      <p>Browse 1,500+ free public APIs — all returnable with JavaScript fetch(). <a href="../apis.html" style="color:var(--accent)">View the Complete API Directory →</a></p>
+    </div>
+  </article>
+
+  <aside>
+    <div class="sidebar-card" style="background:rgba(0,229,160,0.05);border-color:rgba(0,229,160,0.25);">
+      <div class="sidebar-title" style="color:var(--accent)">🗂️ Full API Directory</div>
+      <p style="font-size:0.82rem;color:var(--text2);font-family:var(--serif);margin-bottom:0.75rem;">Browse 1,500+ free public APIs by category.</p>
+      <a href="../apis.html" style="display:block;text-align:center;background:var(--accent);color:#0a0e17;padding:0.6rem;border-radius:7px;font-weight:700;font-size:0.85rem;text-decoration:none;">Browse APIs →</a>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-title">📖 Related Articles</div>
+      <ul class="sidebar-list">
+        <li><a href="free-rest-api-testing-guide.html">How to Test a REST API for Free</a></li>
+        <li><a href="build-weather-app-free-api.html">Build a Weather App with Free APIs</a></li>
+        <li><a href="free-api-for-practice.html">Top 10 Free APIs for Practice Projects</a></li>
+        <li><a href="test-api-without-key.html">50+ Free APIs Without a Key</a></li>
+        <li><a href="postman-free-api-testing.html">How to Use Postman with Free APIs</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-title">🏷️ Article Tags</div>
+      <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+        <span style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.25rem 0.6rem;border-radius:100px;font-size:0.75rem;">JavaScript</span>
+        <span style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.25rem 0.6rem;border-radius:100px;font-size:0.75rem;">fetch API</span>
+        <span style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.25rem 0.6rem;border-radius:100px;font-size:0.75rem;">async/await</span>
+        <span style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.25rem 0.6rem;border-radius:100px;font-size:0.75rem;">JSON</span>
+        <span style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.25rem 0.6rem;border-radius:100px;font-size:0.75rem;">tutorial</span>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <p>© 2025 APITestingFree.com</p>
+    <p><a href="../index.html" style="color:var(--accent);text-decoration:none">Home</a> · <a href="../apis.html" style="color:var(--text3);text-decoration:none">APIs</a> · <a href="../blog.html" style="color:var(--text3);text-decoration:none">Blog</a></p>
+  </div>
+</footer>
+</body>
+</html>

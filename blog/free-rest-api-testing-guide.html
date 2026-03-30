@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Test a REST API for Free — Complete Beginner's Guide 2025 | APITestingFree</title>
+  <meta name="description" content="Learn how to test REST APIs for free step by step — HTTP methods, status codes, JSON parsing, and making your first API call. No experience required." />
+  <meta name="keywords" content="how to test rest api for free, free rest api testing, rest api beginner guide, test api online free, api testing tutorial, free api testing tool, http methods explained" />
+  <link rel="canonical" href="https://apitestingfree.com/blog/free-rest-api-testing-guide.html" />
+  <meta property="og:title" content="How to Test a REST API for Free — Complete Beginner's Guide 2025" />
+  <meta property="og:description" content="Step-by-step guide to REST API testing with free tools and public endpoints. Perfect for beginners." />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Test a REST API for Free — Complete Beginner's Guide 2025",
+    "description": "Learn how to test REST APIs completely for free using browser tools, curl, and JavaScript fetch with real public endpoints.",
+    "author": { "@type": "Organization", "name": "APITestingFree" },
+    "publisher": { "@type": "Organization", "name": "APITestingFree", "url": "https://apitestingfree.com" },
+    "datePublished": "2025-02-10",
+    "dateModified": "2025-03-15",
+    "url": "https://apitestingfree.com/blog/free-rest-api-testing-guide.html",
+    "keywords": "free rest api testing, api testing beginner, http methods, json parsing"
+  }
+  </script>
+  <style>
+    :root{--bg:#0a0e17;--bg2:#0f1521;--bg3:#141c2e;--surface:#1a2336;--surface2:#1f2b42;--border:#2a3a58;--accent:#00e5a0;--accent2:#0099ff;--accent3:#ff6b35;--text:#e8edf5;--text2:#8fa3c0;--text3:#5a7299;--mono:'DM Mono',monospace;--serif:'Lora',serif;--sans:'Syne',sans-serif;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;background:rgba(10,14,23,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+    .nav-logo{font-size:1.15rem;font-weight:800;color:var(--accent);text-decoration:none;}
+    .nav-logo span{color:var(--text2);font-weight:400;}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{color:var(--text2);text-decoration:none;font-size:0.875rem;font-weight:600;transition:color 0.2s;}
+    .nav-links a:hover{color:var(--accent);}
+    .nav-cta{background:var(--accent);color:#0a0e17;padding:0.45rem 1.1rem;border-radius:6px;font-size:0.85rem;font-weight:700;text-decoration:none;}
+    .article-layout{max-width:1100px;margin:0 auto;padding:6rem 2rem 5rem;display:grid;grid-template-columns:1fr 280px;gap:4rem;align-items:start;}
+    article{min-width:0;}
+    .breadcrumb{font-family:var(--mono);font-size:0.75rem;color:var(--text3);margin-bottom:1.5rem;}
+    .breadcrumb a{color:var(--text3);text-decoration:none;transition:color 0.2s;}
+    .breadcrumb a:hover{color:var(--accent);}
+    .art-cat{font-family:var(--mono);font-size:0.72rem;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;}
+    .art-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin-bottom:1.25rem;}
+    .art-title em{font-style:normal;color:var(--accent);}
+    .art-meta{display:flex;gap:1.5rem;font-family:var(--mono);font-size:0.75rem;color:var(--text3);margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border);flex-wrap:wrap;}
+    .art-meta strong{color:var(--text2);}
+    .art-intro{font-family:var(--serif);font-size:1.1rem;line-height:1.8;color:var(--text2);margin-bottom:2.5rem;padding:1.5rem;background:rgba(0,229,160,0.05);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;}
+    h2{font-size:1.4rem;font-weight:800;margin:2.5rem 0 1rem;letter-spacing:-0.02em;}
+    h2 em{font-style:normal;color:var(--accent);}
+    h3{font-size:1.1rem;font-weight:700;margin:2rem 0 0.5rem;color:var(--accent);}
+    p{font-family:var(--serif);font-size:0.975rem;line-height:1.8;color:var(--text2);margin-bottom:1rem;}
+    strong{color:var(--text);font-family:var(--sans);}
+    a{color:var(--accent2);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    code{font-family:var(--mono);font-size:0.85em;background:var(--surface);padding:0.15em 0.4em;border-radius:4px;color:var(--accent);}
+    pre{background:#060a12;border:1px solid var(--border);border-radius:10px;padding:1.5rem;overflow-x:auto;margin:1.5rem 0;}
+    pre code{background:none;padding:0;font-size:0.85rem;line-height:1.8;color:var(--text2);}
+    .c-key{color:#79c0ff;}.c-str{color:#a5d6ff;}.c-val{color:#00e5a0;}.c-comment{color:#5a7299;}.c-fn{color:#d2a8ff;}.c-kw{color:#ff7b72;}
+    .callout{background:rgba(0,153,255,0.07);border:1px solid rgba(0,153,255,0.25);border-radius:10px;padding:1.25rem 1.5rem;margin:2rem 0;}
+    .callout-title{font-weight:700;color:var(--accent2);margin-bottom:0.4rem;font-size:0.9rem;}
+    .callout p{margin:0;font-size:0.875rem;}
+    .callout-green{background:rgba(0,229,160,0.05);border-color:rgba(0,229,160,0.3);}
+    .callout-green .callout-title{color:var(--accent);}
+    .toc{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:2rem;}
+    .toc-title{font-size:0.875rem;font-weight:700;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);}
+    .toc ol{padding-left:1.25rem;display:flex;flex-direction:column;gap:0.35rem;}
+    .toc a{color:var(--text2);font-size:0.85rem;text-decoration:none;font-family:var(--serif);}
+    .toc a:hover{color:var(--accent);}
+    .method-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.875rem;}
+    .method-table th{background:var(--surface2);padding:0.75rem 1rem;text-align:left;font-size:0.8rem;font-family:var(--mono);color:var(--text3);border-bottom:2px solid var(--border);}
+    .method-table td{padding:0.75rem 1rem;border-bottom:1px solid var(--border);font-family:var(--serif);color:var(--text2);}
+    .method-table tr:hover td{background:rgba(255,255,255,0.02);}
+    .method-badge{font-family:var(--mono);font-size:0.72rem;font-weight:700;padding:0.2rem 0.5rem;border-radius:4px;display:inline-block;}
+    .m-get{background:rgba(0,229,160,0.12);color:var(--accent);border:1px solid rgba(0,229,160,0.25);}
+    .m-post{background:rgba(0,153,255,0.12);color:var(--accent2);border:1px solid rgba(0,153,255,0.25);}
+    .m-put{background:rgba(255,107,53,0.12);color:var(--accent3);border:1px solid rgba(255,107,53,0.25);}
+    .m-delete{background:rgba(255,80,80,0.12);color:#ff5050;border:1px solid rgba(255,80,80,0.25);}
+    .status-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;margin:1.5rem 0;}
+    .status-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1rem;}
+    .status-code{font-family:var(--mono);font-size:1.1rem;font-weight:700;margin-bottom:0.25rem;}
+    .s-2xx{color:var(--accent);}
+    .s-3xx{color:#a78bfa;}
+    .s-4xx{color:var(--accent3);}
+    .s-5xx{color:#ff5050;}
+    .status-name{font-size:0.8rem;font-weight:700;margin-bottom:0.25rem;}
+    .status-desc{font-size:0.78rem;color:var(--text2);font-family:var(--serif);line-height:1.4;}
+    aside{position:sticky;top:80px;}
+    .sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin-bottom:1.25rem;}
+    .sidebar-title{font-size:0.85rem;font-weight:700;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);}
+    .sidebar-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+    .sidebar-list a{color:var(--text2);text-decoration:none;font-size:0.82rem;font-family:var(--serif);transition:color 0.2s;line-height:1.4;display:block;}
+    .sidebar-list a:hover{color:var(--accent);}
+    footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem;}
+    .footer-bottom{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+    .footer-bottom p{font-size:0.8rem;color:var(--text3);font-family:var(--mono);}
+    @media(max-width:860px){.article-layout{grid-template-columns:1fr;}.nav-links{display:none;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo">API<span>Testing</span>Free</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../apis.html">All APIs</a></li>
+    <li><a href="../blog.html" class="active">Blog</a></li>
+    <li><a href="../categories.html">Categories</a></li>
+    <li><a href="../about.html">About</a></li>
+  </ul>
+  <a href="../apis.html" class="nav-cta">Browse Free APIs →</a>
+</nav>
+
+<div class="article-layout">
+  <article itemscope itemtype="https://schema.org/BlogPosting">
+    <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../blog.html">Blog</a> / REST API Testing Guide</div>
+    <div class="art-cat">Tutorial · Beginner Guide</div>
+    <h1 class="art-title" itemprop="headline">How to Test a <em>REST API</em> for Free — Complete Beginner's Guide 2025</h1>
+    <div class="art-meta">
+      <span>📅 <strong>February 2025</strong></span>
+      <span>⏱ 12 min read</span>
+      <span>👤 APITestingFree Team</span>
+      <span>🏷️ Beginner · REST · HTTP</span>
+    </div>
+
+    <p class="art-intro" itemprop="description">Learning to test REST APIs is one of the most valuable skills a developer can have in 2025. The good news: you don't need to spend a single cent. This guide walks you through everything — what REST is, how HTTP methods work, how to read JSON responses, and how to make your first free API call using three different methods — all with real, working free API endpoints.</p>
+
+    <div class="toc">
+      <div class="toc-title">📋 Table of Contents</div>
+      <ol>
+        <li><a href="#what-is-rest">What is a REST API?</a></li>
+        <li><a href="#http-methods">The 4 HTTP Methods Explained</a></li>
+        <li><a href="#status-codes">HTTP Status Codes You Must Know</a></li>
+        <li><a href="#json">Understanding JSON Responses</a></li>
+        <li><a href="#method1">Method 1: Test in Your Browser (Zero Setup)</a></li>
+        <li><a href="#method2">Method 2: Test with curl (Command Line)</a></li>
+        <li><a href="#method3">Method 3: Test with JavaScript fetch()</a></li>
+        <li><a href="#free-endpoints">5 Free API Endpoints to Practice With</a></li>
+        <li><a href="#next-steps">Next Steps</a></li>
+      </ol>
+    </div>
+
+    <h2 id="what-is-rest">What is a <em>REST API?</em></h2>
+    <p>A REST API (Representational State Transfer Application Programming Interface) is a web service that lets you send requests over HTTP and receive structured data back — almost always in JSON format. Think of it as a menu at a restaurant: you send an order (a request), and the kitchen (the server) sends back exactly what you asked for (the response).</p>
+    <p>REST APIs power almost every modern application. When your weather app shows today's forecast, when Twitter loads your feed, when you log in with Google — all of that is REST API communication happening behind the scenes.</p>
+    <p>What makes REST special is that it's <strong>stateless</strong>: each request contains all the information needed to process it, and the server doesn't remember previous requests. This makes REST APIs fast, scalable, and easy to test independently.</p>
+
+    <div class="callout">
+      <div class="callout-title">💡 Key Concept: What's an Endpoint?</div>
+      <p>An endpoint is a specific URL that your application sends requests to. For example, <code>https://jsonplaceholder.typicode.com/posts/1</code> is an endpoint that returns data for post #1. Each endpoint typically represents a resource (a user, a post, a product, etc.).</p>
+    </div>
+
+    <h2 id="http-methods">The 4 HTTP Methods <em>Explained</em></h2>
+    <p>HTTP methods (also called verbs) tell the API server what action you want to perform. There are four you need to know for REST API testing:</p>
+
+    <table class="method-table">
+      <thead>
+        <tr><th>Method</th><th>What It Does</th><th>Real-World Analogy</th><th>Has Body?</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="method-badge m-get">GET</span></td><td>Retrieve data</td><td>Reading a menu</td><td>No</td></tr>
+        <tr><td><span class="method-badge m-post">POST</span></td><td>Create new data</td><td>Placing an order</td><td>Yes</td></tr>
+        <tr><td><span class="method-badge m-put">PUT</span></td><td>Update existing data</td><td>Changing your order</td><td>Yes</td></tr>
+        <tr><td><span class="method-badge m-delete">DELETE</span></td><td>Remove data</td><td>Cancelling your order</td><td>Sometimes</td></tr>
+      </tbody>
+    </table>
+
+    <p>For beginner API testing, you'll mostly use <strong>GET</strong> requests — they're the simplest, require no request body, and are safe to call on any public free API. All the free API endpoints in our directory support GET requests.</p>
+
+    <h3>PATCH vs PUT</h3>
+    <p>You'll sometimes also see <strong>PATCH</strong>, which partially updates a resource (only the fields you specify), versus PUT which replaces the entire resource. For testing purposes, treat them similarly — both require sending a JSON body.</p>
+
+    <h2 id="status-codes">HTTP Status Codes <em>You Must Know</em></h2>
+    <p>Every API response includes a status code — a three-digit number that tells you whether your request succeeded or failed. Always check the status code before trying to parse the response body.</p>
+
+    <div class="status-grid">
+      <div class="status-card">
+        <div class="status-code s-2xx">200 OK</div>
+        <div class="status-name">Success</div>
+        <div class="status-desc">Request worked perfectly. Response body contains the data.</div>
+      </div>
+      <div class="status-card">
+        <div class="status-code s-2xx">201 Created</div>
+        <div class="status-name">Resource Created</div>
+        <div class="status-desc">POST request succeeded. New resource was created.</div>
+      </div>
+      <div class="status-card">
+        <div class="status-code s-3xx">301 Redirect</div>
+        <div class="status-name">Moved Permanently</div>
+        <div class="status-desc">The endpoint has moved. Follow the Location header.</div>
+      </div>
+      <div class="status-card">
+        <div class="status-code s-4xx">400 Bad Request</div>
+        <div class="status-name">Your Error</div>
+        <div class="status-desc">Something wrong with your request — check parameters.</div>
+      </div>
+      <div class="status-card">
+        <div class="status-code s-4xx">401 Unauthorized</div>
+        <div class="status-name">Need Auth</div>
+        <div class="status-desc">Missing or invalid API key / token.</div>
+      </div>
+      <div class="status-card">
+        <div class="status-code s-4xx">404 Not Found</div>
+        <div class="status-name">Doesn't Exist</div>
+        <div class="status-desc">The resource or endpoint doesn't exist.</div>
+      </div>
+      <div class="status-card">
+        <div class="status-code s-4xx">429 Too Many Requests</div>
+        <div class="status-name">Rate Limited</div>
+        <div class="status-desc">Slow down — you've exceeded the rate limit.</div>
+      </div>
+      <div class="status-card">
+        <div class="status-code s-5xx">500 Server Error</div>
+        <div class="status-name">Server's Error</div>
+        <div class="status-desc">Something broke on the API server's side. Not your fault.</div>
+      </div>
+    </div>
+
+    <h2 id="json">Understanding <em>JSON Responses</em></h2>
+    <p>JSON (JavaScript Object Notation) is the standard data format used by REST APIs. It's human-readable, lightweight, and natively supported by every modern programming language. When you call a free API, you'll almost always get JSON back.</p>
+    <p>Here's a real JSON response from the JSONPlaceholder free test API:</p>
+    <pre><code><span class="c-comment">// GET https://jsonplaceholder.typicode.com/users/1</span>
+{
+  <span class="c-key">"id"</span>: <span class="c-val">1</span>,
+  <span class="c-key">"name"</span>: <span class="c-str">"Leanne Graham"</span>,
+  <span class="c-key">"username"</span>: <span class="c-str">"Bret"</span>,
+  <span class="c-key">"email"</span>: <span class="c-str">"<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0e5d67606d6b7c6b4e6f7e7c6762206c6774">[email&#160;protected]</a>"</span>,
+  <span class="c-key">"address"</span>: {
+    <span class="c-key">"street"</span>: <span class="c-str">"Kulas Light"</span>,
+    <span class="c-key">"city"</span>: <span class="c-str">"Gwenborough"</span>,
+    <span class="c-key">"zipcode"</span>: <span class="c-str">"92998-3874"</span>
+  },
+  <span class="c-key">"phone"</span>: <span class="c-str">"1-770-736-0988"</span>,
+  <span class="c-key">"website"</span>: <span class="c-str">"hildegard.org"</span>
+}</code></pre>
+
+    <p>JSON has just four data types you need to know: <strong>strings</strong> (text in quotes), <strong>numbers</strong> (no quotes), <strong>booleans</strong> (<code>true</code> / <code>false</code>), <strong>null</strong>, <strong>objects</strong> (key-value pairs in <code>{}</code>), and <strong>arrays</strong> (ordered lists in <code>[]</code>). That's it. Every JSON response you'll ever encounter is made of these building blocks.</p>
+
+    <h2 id="method1">Method 1: Test in Your <em>Browser</em> (Zero Setup)</h2>
+    <p>The fastest way to test a free REST API is to paste its URL directly into your browser address bar. Your browser will make a GET request and display the raw JSON. This works for any public API that doesn't require authentication.</p>
+    <p>Try it right now — copy this URL and paste it into a new browser tab:</p>
+    <pre><code>https://jsonplaceholder.typicode.com/posts/1</code></pre>
+    <p>You'll see raw JSON in the browser. To make it readable, install the <strong>JSON Formatter</strong> extension (available free for Chrome and Firefox). It will automatically pretty-print and colorize every JSON response you view in the browser.</p>
+
+    <div class="callout">
+      <div class="callout-title">🔧 Browser DevTools Tip</div>
+      <p>Open DevTools (F12 or Cmd+Opt+I), go to the <strong>Network</strong> tab, visit any website, and watch the API calls happen in real time. Click any request to see its method, headers, and full JSON response. This is how professionals debug API integrations.</p>
+    </div>
+
+    <h2 id="method2">Method 2: Test with <em>curl</em> (Command Line)</h2>
+    <p>curl is a command-line tool pre-installed on Mac and Linux (and available on Windows via Git Bash or WSL). It gives you full control over HTTP requests and is the industry standard for API testing from the terminal.</p>
+
+    <pre><code><span class="c-comment"># Basic GET request — the simplest free API test</span>
+curl https://jsonplaceholder.typicode.com/posts/1
+
+<span class="c-comment"># Pretty-print JSON output (requires Python)</span>
+curl https://jsonplaceholder.typicode.com/posts/1 | python3 -m json.tool
+
+<span class="c-comment"># See the HTTP status code and headers</span>
+curl -I https://jsonplaceholder.typicode.com/posts/1
+
+<span class="c-comment"># Make a POST request with a JSON body</span>
+curl -X POST https://jsonplaceholder.typicode.com/posts \
+  -H "Content-Type: application/json" \
+  -d '{"title":"My Post","body":"Hello world","userId":1}'
+
+<span class="c-comment"># Pass query parameters to a free API</span>
+curl "https://open-meteo.com/v1/forecast?latitude=51.5&longitude=-0.1&current_weather=true"</code></pre>
+
+    <p>The <code>-H</code> flag adds a request header, <code>-d</code> sends request body data, and <code>-X</code> specifies the HTTP method. For GET requests you don't need <code>-X GET</code> — it's the default.</p>
+
+    <h2 id="method3">Method 3: Test with <em>JavaScript fetch()</em></h2>
+    <p>For web developers, the <code>fetch()</code> API built into every modern browser is the most practical way to test free APIs. Open your browser DevTools console (F12 → Console tab) and run this directly:</p>
+
+    <pre><code><span class="c-comment">// Test a free REST API right in your browser console</span>
+<span class="c-kw">const</span> <span class="c-fn">testAPI</span> = <span class="c-kw">async</span> () => {
+  <span class="c-kw">try</span> {
+    <span class="c-kw">const</span> response = <span class="c-kw">await</span> <span class="c-fn">fetch</span>(<span class="c-str">'https://jsonplaceholder.typicode.com/posts/1'</span>);
+
+    <span class="c-comment">// Always check the status code first</span>
+    <span class="c-kw">if</span> (!response.ok) {
+      <span class="c-kw">throw new</span> <span class="c-fn">Error</span>(<span class="c-str">`HTTP error: ${response.status}`</span>);
+    }
+
+    <span class="c-kw">const</span> data = <span class="c-kw">await</span> response.<span class="c-fn">json</span>();
+    console.<span class="c-fn">log</span>(<span class="c-str">'Status:'</span>, response.status);     <span class="c-comment">// 200</span>
+    console.<span class="c-fn">log</span>(<span class="c-str">'Data:'</span>, data);
+    console.<span class="c-fn">log</span>(<span class="c-str">'Title:'</span>, data.title);            <span class="c-comment">// Access a field</span>
+  } <span class="c-kw">catch</span> (error) {
+    console.<span class="c-fn">error</span>(<span class="c-str">'API call failed:'</span>, error.message);
+  }
+};
+
+<span class="c-fn">testAPI</span>();</code></pre>
+
+    <p>This pattern — async/await with try/catch — is the professional way to call any free API in JavaScript. The <code>response.ok</code> check catches any 4xx or 5xx errors before you try to parse the body.</p>
+
+    <h2 id="free-endpoints">5 Free API Endpoints to <em>Practice With</em></h2>
+    <p>These five free API endpoints are perfect for beginners — no key required, reliable uptime, and clean JSON responses:</p>
+
+    <p><strong>1. JSONPlaceholder</strong> — <code>https://jsonplaceholder.typicode.com/posts</code><br/>Returns 100 fake blog posts. Perfect for practicing GET, POST, PUT, and DELETE requests with fake data.</p>
+    <p><strong>2. Open-Meteo</strong> — <code>https://open-meteo.com/v1/forecast?latitude=51.5&longitude=-0.1&current_weather=true</code><br/>Real weather data for any location. Great for practicing query parameters.</p>
+    <p><strong>3. Dog CEO</strong> — <code>https://dog.ceo/api/breeds/image/random</code><br/>Returns a random dog image URL. Simple, fun, and perfect for your first API call.</p>
+    <p><strong>4. CoinGecko</strong> — <code>https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd</code><br/>Live Bitcoin price. Teaches you how query parameters work in real financial APIs.</p>
+    <p><strong>5. RestCountries</strong> — <code>https://restcountries.com/v3.1/name/canada</code><br/>Detailed country data. Shows you how APIs return nested objects and arrays.</p>
+
+    <div class="callout callout-green">
+      <div class="callout-title">🚀 Ready to Explore More?</div>
+      <p>Browse all <strong>1,500+ free public APIs</strong> in our full directory, organized by category with filters for authentication type, HTTPS support, and CORS. <a href="../apis.html" style="color:var(--accent)">View the Complete Free API Directory →</a></p>
+    </div>
+
+    <h2 id="next-steps">Next Steps</h2>
+    <p>Now that you understand REST API fundamentals, here's what to do next: pick one of the free APIs above and build something small — a page that shows a random dog photo, a live weather card, or a Bitcoin price ticker. Building a real (even tiny) project will cement these concepts far faster than reading.</p>
+    <p>When you're ready to go deeper, read our guides on <a href="javascript-fetch-free-api.html">mastering JavaScript's Fetch API</a>, <a href="postman-free-api-testing.html">using Postman for API testing</a>, and <a href="build-weather-app-free-api.html">building a complete weather app with free APIs</a>.</p>
+  </article>
+
+  <aside>
+    <div class="sidebar-card" style="background:rgba(0,229,160,0.05);border-color:rgba(0,229,160,0.25);">
+      <div class="sidebar-title" style="color:var(--accent)">🗂️ Full API Directory</div>
+      <p style="font-size:0.82rem;color:var(--text2);font-family:var(--serif);margin-bottom:0.75rem;">Browse 1,500+ free public APIs organized by category.</p>
+      <a href="../apis.html" style="display:block;text-align:center;background:var(--accent);color:#0a0e17;padding:0.6rem;border-radius:7px;font-weight:700;font-size:0.85rem;text-decoration:none;">Browse APIs →</a>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-title">📖 Related Articles</div>
+      <ul class="sidebar-list">
+        <li><a href="best-free-apis-no-key.html">15 Best Free APIs — No Key Required 2025</a></li>
+        <li><a href="javascript-fetch-free-api.html">JavaScript Fetch API Tutorial with Free Endpoints</a></li>
+        <li><a href="postman-free-api-testing.html">How to Use Postman with Free APIs</a></li>
+        <li><a href="mock-api-vs-real-api.html">Free Mock API vs Real API — What's the Difference?</a></li>
+        <li><a href="build-weather-app-free-api.html">Build a Weather App Using Free APIs</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-title">🏷️ Article Tags</div>
+      <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+        <span style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.25rem 0.6rem;border-radius:100px;font-size:0.75rem;">REST API</span>
+        <span style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.25rem 0.6rem;border-radius:100px;font-size:0.75rem;">beginner</span>
+        <span style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.25rem 0.6rem;border-radius:100px;font-size:0.75rem;">HTTP</span>
+        <span style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.25rem 0.6rem;border-radius:100px;font-size:0.75rem;">JSON</span>
+        <span style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.25rem 0.6rem;border-radius:100px;font-size:0.75rem;">curl</span>
+        <span style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.25rem 0.6rem;border-radius:100px;font-size:0.75rem;">fetch</span>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <p>© 2025 APITestingFree.com</p>
+    <p><a href="../index.html" style="color:var(--accent);text-decoration:none">Home</a> · <a href="../apis.html" style="color:var(--text3);text-decoration:none">APIs</a> · <a

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free API Categories — Browse by Topic | APITestingFree</title>
+  <meta name="description" content="Browse free public APIs for testing by category — Animals, Weather, Finance, Crypto, Science, Games, and 35+ more. Find the right free API endpoint for your project." />
+  <meta name="keywords" content="free api categories, free weather api testing, free finance api, free games api, free crypto api testing, free api by category" />
+  <link rel="canonical" href="https://apitestingfree.com/categories.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#0a0e17;--bg2:#0f1521;--bg3:#141c2e;--surface:#1a2336;--surface2:#1f2b42;--border:#2a3a58;--accent:#00e5a0;--accent2:#0099ff;--accent3:#ff6b35;--text:#e8edf5;--text2:#8fa3c0;--text3:#5a7299;--mono:'DM Mono',monospace;--serif:'Lora',serif;--sans:'Syne',sans-serif;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;background:rgba(10,14,23,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+    .nav-logo{font-size:1.15rem;font-weight:800;color:var(--accent);text-decoration:none;}
+    .nav-logo span{color:var(--text2);font-weight:400;}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{color:var(--text2);text-decoration:none;font-size:0.875rem;font-weight:600;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--accent);}
+    .nav-cta{background:var(--accent);color:#0a0e17;padding:0.45rem 1.1rem;border-radius:6px;font-size:0.85rem;font-weight:700;text-decoration:none;}
+    .page-hero{padding:7rem 2rem 3rem;background:var(--bg2);border-bottom:1px solid var(--border);}
+    .page-hero-inner{max-width:1100px;margin:0 auto;}
+    .breadcrumb{font-family:var(--mono);font-size:0.75rem;color:var(--text3);margin-bottom:1rem;}
+    .breadcrumb a{color:var(--text3);text-decoration:none;}
+    .page-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:0.75rem;}
+    .page-hero h1 em{font-style:normal;color:var(--accent);}
+    .page-hero p{color:var(--text2);font-family:var(--serif);font-size:1rem;max-width:540px;line-height:1.7;}
+    .main{max-width:1100px;margin:0 auto;padding:3rem 2rem 5rem;}
+    .section-label{font-family:var(--mono);font-size:0.75rem;color:var(--text3);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.5rem;}
+    .cats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;}
+    .cat-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;text-decoration:none;color:inherit;transition:all 0.2s;display:flex;flex-direction:column;gap:0.6rem;}
+    .cat-card:hover{border-color:rgba(0,229,160,0.4);transform:translateY(-3px);background:var(--surface2);}
+    .cat-emoji{font-size:2rem;}
+    .cat-name{font-weight:700;font-size:1rem;}
+    .cat-count{font-family:var(--mono);font-size:0.75rem;color:var(--accent);}
+    .cat-desc{font-size:0.8rem;color:var(--text2);font-family:var(--serif);line-height:1.5;}
+    footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem;}
+    .footer-bottom{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+    .footer-bottom p{font-size:0.8rem;color:var(--text3);font-family:var(--mono);}
+    @media(max-width:640px){.nav-links{display:none;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">API<span>Testing</span>Free</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="apis.html">All APIs</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="categories.html" class="active">Categories</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="apis.html" class="nav-cta">Browse APIs →</a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Categories</div>
+    <h1>Browse Free APIs <em>by Category</em></h1>
+    <p>Find the right free public API for testing by exploring our 40+ hand-curated categories — from simple animal image APIs to complex financial data endpoints.</p>
+  </div>
+</div>
+
+<div class="main">
+  <div class="section-label">All categories — <span id="catCount">loading...</span> total</div>
+  <div class="cats-grid" id="catsGrid">
+    <div style="padding:4rem;text-align:center;color:var(--text3);font-family:var(--mono);">Loading categories...</div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <p>© 2025 APITestingFree.com</p>
+    <p><a href="index.html" style="color:var(--accent);text-decoration:none">Home</a> · <a href="apis.html" style="color:var(--text3);text-decoration:none">APIs</a> · <a href="blog.html" style="color:var(--text3);text-decoration:none">Blog</a></p>
+  </div>
+</footer>
+
+<script>
+  const catEmojis = {
+    Animals:'🐾',Anime:'⛩️','Anti-Malware':'🛡️','Art & Design':'🎨','Authentication & Authorization':'🔐',
+    Blockchain:'⛓️',Books:'📚',Business:'💼',Calendar:'📅','Cloud Storage & File Sharing':'☁️',
+    'Continuous Integration':'🔄',Cryptocurrency:'🪙','Currency Exchange':'💱','Data Validation':'✅',
+    Development:'⚙️',Dictionaries:'📖','Documents & Productivity':'📄',Email:'✉️',Entertainment:'🎬',
+    Environment:'🌿',Events:'🎪',Finance:'💹','Food & Drink':'🍕','Games & Comics':'🎮',
+    Geocoding:'🗺️',Government:'🏛️',Health:'❤️‍🩹',Jobs:'💼','Machine Learning':'🤖',
+    Music:'🎵',News:'📰','Open Data':'📊','Open Source Projects':'💻',Patent:'📋',
+    Personality:'🧠',Phone:'📱',Photography:'📷',Programming:'🖥️',Science:'🔬',
+    Security:'🔒',Shopping:'🛒',Social:'👥',Sports:'⚽',Test:'🧪',
+    Transportation:'🚂','URL Shorteners':'🔗','Vehicle':'🚗',Video:'📹',Weather:'🌤️'
+  };
+  const catDescs = {
+    Animals:'Dog, cat, bird, and wildlife image and fact APIs',
+    Weather:'Free weather forecast and historical climate APIs',
+    Finance:'Stock prices, forex rates, and financial data endpoints',
+    Cryptocurrency:'Real-time crypto prices, market data, and coin info',
+    Development:'Fake data, mock APIs, and developer utility endpoints',
+    Entertainment:'Movies, TV shows, Star Wars, Marvel, and more',
+    'Games & Comics':'Video game data, Pokémon, comic character APIs',
+    Geocoding:'Maps, coordinates, address, and location lookup APIs',
+    Science:'Space, NASA, biology, chemistry, and research data',
+    Health:'Medical, fitness, and wellness data APIs',
+    Music:'Song data, lyrics search, and music metadata APIs',
+    Books:'Book search, author data, and library APIs',
+    News:'Headlines, article search, and news aggregation APIs',
+    Sports:'Scores, standings, player stats, and sports data APIs',
+    Food:'Recipes, restaurant data, nutrition, and meal planning'
+  };
+
+  async function loadCategories() {
+    try {
+      const res = await fetch('https://raw.githubusercontent.com/public-apis-dev/public-apis/main/db/resources.json');
+      const data = await res.json();
+      const cats = {};
+      (data.entries||[]).forEach(a => { cats[a.Category] = (cats[a.Category]||0)+1; });
+      const sorted = Object.entries(cats).sort((a,b)=>a[0].localeCompare(b[0]));
+      document.getElementById('catCount').textContent = sorted.length + ' categories';
+      document.getElementById('catsGrid').innerHTML = sorted.map(([cat,count]) => `
+        <a href="apis.html?cat=${encodeURIComponent(cat)}" class="cat-card" itemscope itemtype="https://schema.org/ItemList">
+          <div class="cat-emoji">${catEmojis[cat]||'📡'}</div>
+          <div class="cat-name" itemprop="name">${cat}</div>
+          <div class="cat-count">${count} free APIs</div>
+          <div class="cat-desc">${catDescs[cat]||'Free public APIs for '+cat.toLowerCase()+' data and testing'}</div>
+        </a>`).join('');
+    } catch(e) {
+      document.getElementById('catsGrid').innerHTML = `<p style="color:var(--text2);font-family:var(--serif)">Could not load categories. <a href="apis.html" style="color:var(--accent)">View all APIs</a>.</p>`;
+    }
+  }
+  loadCategories();
+</script>
+</body>
+</html>

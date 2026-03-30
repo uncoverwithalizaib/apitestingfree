@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free API Tutorials & Guides for Developers | APITestingFree Blog</title>
+  <meta name="description" content="In-depth tutorials on free APIs for testing, REST API guides, mock API comparisons, and beginner-friendly projects. Learn API development for free." />
+  <meta name="keywords" content="free api tutorials, rest api guide, free api for testing, api for beginners, free mock api tutorial, api testing guide, public api tutorial" />
+  <link rel="canonical" href="https://apitestingfree.com/blog.html" />
+  <meta property="og:title" content="Free API Tutorials & Developer Guides | APITestingFree Blog" />
+  <meta property="og:description" content="Tutorials, guides, and project walkthroughs using free public APIs for testing and learning." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "APITestingFree Blog",
+    "url": "https://apitestingfree.com/blog.html",
+    "description": "Free API tutorials, guides, and developer resources"
+  }
+  </script>
+  <style>
+    :root {
+      --bg:#0a0e17;--bg2:#0f1521;--bg3:#141c2e;--surface:#1a2336;--surface2:#1f2b42;
+      --border:#2a3a58;--accent:#00e5a0;--accent2:#0099ff;--accent3:#ff6b35;
+      --text:#e8edf5;--text2:#8fa3c0;--text3:#5a7299;
+      --mono:'DM Mono',monospace;--serif:'Lora',serif;--sans:'Syne',sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;background:rgba(10,14,23,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+    .nav-logo{font-size:1.15rem;font-weight:800;color:var(--accent);letter-spacing:-0.5px;text-decoration:none;}
+    .nav-logo span{color:var(--text2);font-weight:400;}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{color:var(--text2);text-decoration:none;font-size:0.875rem;font-weight:600;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--accent);}
+    .nav-cta{background:var(--accent);color:#0a0e17;padding:0.45rem 1.1rem;border-radius:6px;font-size:0.85rem;font-weight:700;text-decoration:none;}
+    .page-hero{padding:8rem 2rem 4rem;background:var(--bg2);border-bottom:1px solid var(--border);}
+    .page-hero-inner{max-width:900px;margin:0 auto;}
+    .breadcrumb{font-family:var(--mono);font-size:0.75rem;color:var(--text3);margin-bottom:1.5rem;}
+    .breadcrumb a{color:var(--text3);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--accent);}
+    .page-hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:1rem;line-height:1.1;}
+    .page-hero h1 em{font-style:normal;color:var(--accent);}
+    .page-hero p{color:var(--text2);font-family:var(--serif);font-size:1.1rem;max-width:560px;line-height:1.7;}
+    .blog-main{max-width:1200px;margin:0 auto;padding:4rem 2rem 6rem;display:grid;grid-template-columns:1fr 320px;gap:3rem;align-items:start;}
+    .blog-posts{}
+    .section-label{font-family:var(--mono);font-size:0.75rem;color:var(--text3);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.5rem;}
+
+    /* Featured post */
+    .featured-post{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:2rem;text-decoration:none;color:inherit;display:block;transition:border-color 0.2s,transform 0.2s;}
+    .featured-post:hover{border-color:rgba(0,229,160,0.4);transform:translateY(-3px);}
+    .featured-thumb{height:240px;display:flex;align-items:center;justify-content:center;font-size:4rem;background:linear-gradient(135deg,#0f1521,#1a2550);position:relative;}
+    .featured-tag{position:absolute;top:1.25rem;left:1.25rem;background:var(--accent);color:#0a0e17;font-family:var(--mono);font-size:0.72rem;font-weight:700;padding:0.3rem 0.75rem;border-radius:100px;}
+    .featured-body{padding:2rem;}
+    .post-cat{font-family:var(--mono);font-size:0.72rem;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;}
+    .post-title{font-size:1.4rem;font-weight:800;line-height:1.3;margin-bottom:0.75rem;letter-spacing:-0.02em;}
+    .post-excerpt{color:var(--text2);font-family:var(--serif);line-height:1.7;margin-bottom:1.25rem;}
+    .post-meta{display:flex;align-items:center;gap:1.5rem;font-family:var(--mono);font-size:0.75rem;color:var(--text3);}
+    .post-tag{background:var(--surface2);padding:0.25rem 0.65rem;border-radius:4px;color:var(--text2);}
+
+    /* Post grid */
+    .posts-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+    .post-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;transition:all 0.2s;display:flex;flex-direction:column;}
+    .post-card:hover{border-color:rgba(0,153,255,0.4);transform:translateY(-3px);}
+    .post-thumb{height:140px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;}
+    .t1{background:linear-gradient(135deg,#0f1521,#1a2550);}
+    .t2{background:linear-gradient(135deg,#0f1521,#1a3530);}
+    .t3{background:linear-gradient(135deg,#0f1521,#2a1a35);}
+    .t4{background:linear-gradient(135deg,#0f1521,#2a1a1a);}
+    .t5{background:linear-gradient(135deg,#0f1521,#1a2a15);}
+    .t6{background:linear-gradient(135deg,#0f1521,#1a2535);}
+    .post-body{padding:1.25rem;flex:1;display:flex;flex-direction:column;}
+    .post-footer{margin-top:auto;padding-top:0.75rem;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:0.72rem;color:var(--text3);}
+    .read-link{color:var(--accent2);font-weight:600;}
+
+    /* Sidebar */
+    .blog-sidebar{}
+    .sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;}
+    .sidebar-title{font-size:0.9rem;font-weight:700;margin-bottom:1.25rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border);}
+    .sidebar-list{list-style:none;display:flex;flex-direction:column;gap:0.75rem;}
+    .sidebar-list li a{color:var(--text2);text-decoration:none;font-size:0.875rem;transition:color 0.2s;line-height:1.4;display:block;font-family:var(--serif);}
+    .sidebar-list li a:hover{color:var(--accent);}
+    .sidebar-list li{padding-bottom:0.75rem;border-bottom:1px solid var(--border);}
+    .sidebar-list li:last-child{border:none;padding:0;}
+    .tag-cloud{display:flex;flex-wrap:wrap;gap:0.5rem;}
+    .tag{background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.3rem 0.75rem;border-radius:100px;font-size:0.78rem;text-decoration:none;transition:all 0.2s;}
+    .tag:hover{border-color:var(--accent);color:var(--accent);}
+    .cats-list{list-style:none;display:flex;flex-direction:column;gap:0;}
+    .cats-list li a{display:flex;justify-content:space-between;align-items:center;color:var(--text2);text-decoration:none;font-size:0.875rem;padding:0.6rem 0;border-bottom:1px solid var(--border);transition:color 0.2s;}
+    .cats-list li:last-child a{border:none;}
+    .cats-list li a:hover{color:var(--accent);}
+    .cats-count{font-family:var(--mono);font-size:0.72rem;color:var(--text3);}
+
+    footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2rem 1.5rem;}
+    .footer-bottom{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-bottom p{font-size:0.8rem;color:var(--text3);font-family:var(--mono);}
+    @media(max-width:900px){.blog-main{grid-template-columns:1fr;}.posts-grid{grid-template-columns:1fr;}.nav-links{display:none;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">API<span>Testing</span>Free</a>
+  <ul class="nav-links">
+    <li><a href="index.html#apis">Browse APIs</a></li>
+    <li><a href="apis.html">All APIs</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="apis.html" class="nav-cta">Browse Free APIs →</a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Blog</div>
+    <h1>Free API <em>Tutorials & Guides</em></h1>
+    <p>Step-by-step tutorials, project walkthroughs, and reference guides for using free public APIs in your projects. Written for beginners and experienced developers alike.</p>
+  </div>
+</div>
+
+<div class="blog-main">
+  <!-- POSTS -->
+  <main>
+    <div class="section-label">Featured Article</div>
+    <a href="blog/best-free-apis-no-key.html" class="featured-post" itemscope itemtype="https://schema.org/BlogPosting">
+      <div class="featured-thumb">
+        🔓
+        <span class="featured-tag">⭐ Most Popular</span>
+      </div>
+      <div class="featured-body">
+        <div class="post-cat">Beginner Guide</div>
+        <div class="post-title" itemprop="headline">15 Best Free APIs That Require No API Key in 2025 — Test Instantly</div>
+        <p class="post-excerpt" itemprop="description">A hand-picked list of the best free public APIs you can call directly from your browser right now — no registration, no credit card, no rate-limit anxiety. Every API on this list is completely free to use, returns clean JSON, and works great for practice projects and prototyping.</p>
+        <div class="post-meta">
+          <span>📅 January 2025</span>
+          <span>⏱ 8 min read</span>
+          <span class="post-tag">Beginner</span>
+          <span class="post-tag">No-Key APIs</span>
+        </div>
+      </div>
+    </a>
+
+    <div class="section-label" style="margin-top:2rem">All Articles</div>
+    <div class="posts-grid">
+      <a href="blog/free-rest-api-testing-guide.html" class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="post-thumb t2">🧪</div>
+        <div class="post-body">
+          <div class="post-cat">Tutorial</div>
+          <div class="post-title" itemprop="headline" style="font-size:1rem">How to Test a REST API for Free — Complete Beginner's Guide</div>
+          <p class="post-excerpt" style="font-size:0.85rem;margin-top:0.5rem" itemprop="description">Learn what REST APIs are, HTTP methods, status codes, and how to make your first free API call.</p>
+          <div class="post-footer"><span>Feb 2025 · 12 min</span><span class="read-link">Read →</span></div>
+        </div>
+      </a>
+      <a href="blog/mock-api-vs-real-api.html" class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="post-thumb t3">🔄</div>
+        <div class="post-body">
+          <div class="post-cat">Explainer</div>
+          <div class="post-title" itemprop="headline" style="font-size:1rem">Free Mock API vs Real API — What's the Difference?</div>
+          <p class="post-excerpt" style="font-size:0.85rem;margin-top:0.5rem" itemprop="description">When to use a free fake API for testing and prototyping versus a live production API endpoint.</p>
+          <div class="post-footer"><span>Feb 2025 · 6 min</span><span class="read-link">Read →</span></div>
+        </div>
+      </a>
+      <a href="blog/build-weather-app-free-api.html" class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="post-thumb t4">🌤️</div>
+        <div class="post-body">
+          <div class="post-cat">Project Tutorial</div>
+          <div class="post-title" itemprop="headline" style="font-size:1rem">Build a Weather App Using Only Free Public APIs</div>
+          <p class="post-excerpt" style="font-size:0.85rem;margin-top:0.5rem" itemprop="description">Step-by-step: build a real weather dashboard with Open-Meteo and JavaScript. Full source code included.</p>
+          <div class="post-footer"><span>Mar 2025 · 15 min</span><span class="read-link">Read →</span></div>
+        </div>
+      </a>
+      <a href="blog/free-api-for-practice.html" class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="post-thumb t5">🏋️</div>
+        <div class="post-body">
+          <div class="post-cat">Practice Guide</div>
+          <div class="post-title" itemprop="headline" style="font-size:1rem">Top 10 Free APIs for Practice Projects That Will Impress</div>
+          <p class="post-excerpt" style="font-size:0.85rem;margin-top:0.5rem" itemprop="description">The best free API endpoints to use in portfolio projects. Impress employers with real-world integrations.</p>
+          <div class="post-footer"><span>Mar 2025 · 9 min</span><span class="read-link">Read →</span></div>
+        </div>
+      </a>
+      <a href="blog/test-api-without-key.html" class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="post-thumb t1">🗝️</div>
+        <div class="post-body">
+          <div class="post-cat">Reference</div>
+          <div class="post-title" itemprop="headline" style="font-size:1rem">50+ Free APIs You Can Test Without an API Key Right Now</div>
+          <p class="post-excerpt" style="font-size:0.85rem;margin-top:0.5rem" itemprop="description">A comprehensive list of totally open free API endpoints for immediate testing — organized by category.</p>
+          <div class="post-footer"><span>Mar 2025 · 11 min</span><span class="read-link">Read →</span></div>
+        </div>
+      </a>
+      <a href="blog/postman-free-api-testing.html" class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="post-thumb t6">📮</div>
+        <div class="post-body">
+          <div class="post-cat">Tool Guide</div>
+          <div class="post-title" itemprop="headline" style="font-size:1rem">How to Use Postman with Free APIs — Complete Setup Guide</div>
+          <p class="post-excerpt" style="font-size:0.85rem;margin-top:0.5rem" itemprop="description">Set up Postman for free API testing, organize collections, use environments, and automate tests.</p>
+          <div class="post-footer"><span>Apr 2025 · 10 min</span><span class="read-link">Read →</span></div>
+        </div>
+      </a>
+      <a href="blog/javascript-fetch-free-api.html" class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="post-thumb t2">💛</div>
+        <div class="post-body">
+          <div class="post-cat">JavaScript</div>
+          <div class="post-title" itemprop="headline" style="font-size:1rem">JavaScript Fetch API Tutorial — Call Free APIs with No Setup</div>
+          <p class="post-excerpt" style="font-size:0.85rem;margin-top:0.5rem" itemprop="description">Master the JavaScript Fetch API using real free endpoints. Async/await, error handling, and JSON parsing.</p>
+          <div class="post-footer"><span>Apr 2025 · 13 min</span><span class="read-link">Read →</span></div>
+        </div>
+      </a>
+      <a href="blog/free-crypto-api.html" class="post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="post-thumb t3">🪙</div>
+        <div class="post-body">
+          <div class="post-cat">Finance APIs</div>
+          <div class="post-title" itemprop="headline" style="font-size:1rem">Best Free Crypto APIs for Testing — CoinGecko &amp; More</div>
+          <p class="post-excerpt" style="font-size:0.85rem;margin-top:0.5rem" itemprop="description">Build a real-time crypto price tracker using free cryptocurrency APIs that don't require an account.</p>
+          <div class="post-footer"><span>May 2025 · 8 min</span><span class="read-link">Read →</span></div>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="blog-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">🔥 Most Read Articles</div>
+      <ul class="sidebar-list">
+        <li><a href="blog/best-free-apis-no-key.html">15 Best Free APIs — No Key Required 2025</a></li>
+        <li><a href="blog/free-rest-api-testing-guide.html">How to Test a REST API for Free</a></li>
+        <li><a href="blog/build-weather-app-free-api.html">Build a Weather App with Free API</a></li>
+        <li><a href="blog/test-api-without-key.html">50+ Free APIs Without a Key</a></li>
+        <li><a href="blog/javascript-fetch-free-api.html">JavaScript Fetch API Tutorial</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-title">📂 Article Categories</div>
+      <ul class="cats-list">
+        <li><a href="#">Beginner Guides <span class="cats-count">8</span></a></li>
+        <li><a href="#">Project Tutorials <span class="cats-count">6</span></a></li>
+        <li><a href="#">Tool Guides <span class="cats-count">5</span></a></li>
+        <li><a href="#">Reference Lists <span class="cats-count">7</span></a></li>
+        <li><a href="#">JavaScript <span class="cats-count">4</span></a></li>
+        <li><a href="#">Python <span class="cats-count">3</span></a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-title">🏷️ Popular Tags</div>
+      <div class="tag-cloud">
+        <a href="#" class="tag">free api</a>
+        <a href="#" class="tag">no key</a>
+        <a href="#" class="tag">REST</a>
+        <a href="#" class="tag">JSON</a>
+        <a href="#" class="tag">JavaScript</a>
+        <a href="#" class="tag">Python</a>
+        <a href="#" class="tag">weather api</a>
+        <a href="#" class="tag">mock api</a>
+        <a href="#" class="tag">fetch</a>
+        <a href="#" class="tag">tutorial</a>
+        <a href="#" class="tag">beginner</a>
+        <a href="#" class="tag">CORS</a>
+      </div>
+    </div>
+
+    <div class="sidebar-card" style="background:rgba(0,229,160,0.05);border-color:rgba(0,229,160,0.25);">
+      <div class="sidebar-title" style="color:var(--accent)">🚀 Browse the Directory</div>
+      <p style="font-size:0.875rem;color:var(--text2);font-family:var(--serif);margin-bottom:1rem;line-height:1.6;">Explore 1,500+ free public APIs for testing, categorized and filtered for developers.</p>
+      <a href="apis.html" style="display:block;text-align:center;background:var(--accent);color:#0a0e17;padding:0.65rem;border-radius:8px;font-weight:700;font-size:0.875rem;text-decoration:none;">Browse Free APIs →</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <p>© 2025 APITestingFree.com — Free API directory & tutorials for developers</p>
+    <p><a href="index.html" style="color:var(--accent);text-decoration:none">Home</a> · <a href="apis.html" style="color:var(--text3);text-decoration:none">APIs</a> · <a href="about.html" style="color:var(--text3);text-decoration:none">About</a></p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://apitestingfree.com/sitemap.xml
+
+# Crawl all pages
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

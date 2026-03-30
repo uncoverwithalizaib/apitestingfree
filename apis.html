@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse 1500+ Free Public APIs for Testing — Full Directory | APITestingFree</title>
+  <meta name="description" content="Complete directory of 1500+ free public APIs for testing and learning. Filter by category, authentication, HTTPS, and CORS. Find free REST APIs with no key required." />
+  <meta name="keywords" content="free api for testing, free public api, free rest api, test api online free, free api endpoint, free api no key, public api directory, free mock api list" />
+  <link rel="canonical" href="https://apitestingfree.com/apis.html" />
+  <meta property="og:title" content="Browse 1500+ Free Public APIs for Testing" />
+  <meta property="og:description" content="Complete free API directory with search and filters. No key required for most APIs." />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"ItemList",
+    "name":"Free Public APIs for Testing Directory",
+    "description":"Curated list of 1500+ free public APIs for developer testing and learning",
+    "url":"https://apitestingfree.com/apis.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#0a0e17;--bg2:#0f1521;--bg3:#141c2e;--surface:#1a2336;--surface2:#1f2b42;--border:#2a3a58;--accent:#00e5a0;--accent2:#0099ff;--accent3:#ff6b35;--text:#e8edf5;--text2:#8fa3c0;--text3:#5a7299;--mono:'DM Mono',monospace;--serif:'Lora',serif;--sans:'Syne',sans-serif;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;background:rgba(10,14,23,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+    .nav-logo{font-size:1.15rem;font-weight:800;color:var(--accent);text-decoration:none;letter-spacing:-0.5px;}
+    .nav-logo span{color:var(--text2);font-weight:400;}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{color:var(--text2);text-decoration:none;font-size:0.875rem;font-weight:600;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--accent);}
+    .nav-cta{background:var(--accent);color:#0a0e17;padding:0.45rem 1.1rem;border-radius:6px;font-size:0.85rem;font-weight:700;text-decoration:none;}
+
+    .page-hero{padding:7rem 2rem 3rem;background:var(--bg2);border-bottom:1px solid var(--border);}
+    .page-hero-inner{max-width:1200px;margin:0 auto;}
+    .breadcrumb{font-family:var(--mono);font-size:0.75rem;color:var(--text3);margin-bottom:1rem;}
+    .breadcrumb a{color:var(--text3);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--accent);}
+    .page-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:0.75rem;line-height:1.2;}
+    .page-hero h1 em{font-style:normal;color:var(--accent);}
+    .page-hero p{color:var(--text2);font-family:var(--serif);font-size:1rem;max-width:580px;line-height:1.7;margin-bottom:1.5rem;}
+    .hero-stats{display:flex;gap:2rem;flex-wrap:wrap;}
+    .hero-stat{font-family:var(--mono);font-size:0.8rem;color:var(--text3);}
+    .hero-stat strong{color:var(--accent);font-size:1.1rem;margin-right:0.3rem;}
+
+    .main-layout{max-width:1200px;margin:0 auto;padding:2.5rem 2rem 5rem;display:grid;grid-template-columns:240px 1fr;gap:2rem;align-items:start;}
+
+    /* Sidebar Filters */
+    .filter-sidebar{position:sticky;top:80px;}
+    .filter-panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin-bottom:1rem;}
+    .filter-panel-title{font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:1px solid var(--border);}
+    .filter-option{display:flex;align-items:center;gap:0.5rem;padding:0.35rem 0;cursor:pointer;}
+    .filter-option input{accent-color:var(--accent);cursor:pointer;}
+    .filter-option label{font-size:0.875rem;color:var(--text2);cursor:pointer;transition:color 0.2s;}
+    .filter-option:hover label{color:var(--text);}
+    .filter-option .count{margin-left:auto;font-family:var(--mono);font-size:0.7rem;color:var(--text3);}
+    .search-mini{width:100%;background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:0.55rem 0.85rem;border-radius:7px;font-family:var(--mono);font-size:0.85rem;outline:none;transition:border-color 0.2s;margin-bottom:0.75rem;}
+    .search-mini:focus{border-color:var(--accent);}
+    .search-mini::placeholder{color:var(--text3);}
+    .cat-filter-list{max-height:300px;overflow-y:auto;display:flex;flex-direction:column;gap:0.1rem;}
+    .cat-filter-list::-webkit-scrollbar{width:4px;}
+    .cat-filter-list::-webkit-scrollbar-track{background:transparent;}
+    .cat-filter-list::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
+    .cat-btn{background:none;border:none;text-align:left;padding:0.4rem 0.6rem;border-radius:6px;cursor:pointer;font-size:0.82rem;color:var(--text2);width:100%;transition:all 0.15s;display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);}
+    .cat-btn:hover{background:var(--surface2);color:var(--text);}
+    .cat-btn.active{background:rgba(0,229,160,0.12);color:var(--accent);font-weight:600;}
+    .cat-btn .cat-count{font-family:var(--mono);font-size:0.7rem;color:var(--text3);}
+    .reset-btn{width:100%;background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.55rem;border-radius:7px;cursor:pointer;font-size:0.8rem;transition:all 0.2s;font-family:var(--sans);}
+    .reset-btn:hover{border-color:var(--accent3);color:var(--accent3);}
+
+    /* Results area */
+    .results-area{}
+    .results-toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;gap:1rem;flex-wrap:wrap;}
+    .results-info{font-family:var(--mono);font-size:0.8rem;color:var(--text3);}
+    .results-info strong{color:var(--accent);}
+    .sort-select{background:var(--surface);border:1px solid var(--border);color:var(--text2);padding:0.4rem 0.8rem;border-radius:7px;font-size:0.82rem;cursor:pointer;outline:none;font-family:var(--sans);}
+    .view-toggle{display:flex;gap:0.25rem;}
+    .view-btn{background:var(--surface);border:1px solid var(--border);color:var(--text2);padding:0.4rem 0.6rem;border-radius:6px;cursor:pointer;font-size:0.9rem;transition:all 0.2s;}
+    .view-btn.active{background:var(--accent);color:#0a0e17;border-color:var(--accent);}
+
+    /* API Grid */
+    #apiGrid.grid-view{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+    #apiGrid.list-view{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+    .api-card{background:var(--surface);padding:1.25rem 1.4rem;transition:background 0.2s;display:flex;flex-direction:column;gap:0.5rem;}
+    .api-card:hover{background:var(--surface2);}
+    #apiGrid.list-view .api-card{flex-direction:row;align-items:flex-start;gap:1.5rem;}
+    #apiGrid.list-view .api-card-main{flex:1;min-width:0;}
+    #apiGrid.list-view .api-card-action{flex-shrink:0;margin-top:auto;}
+    .api-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:0.5rem;}
+    .api-name{font-weight:700;font-size:0.975rem;color:var(--text);line-height:1.3;}
+    .api-badges{display:flex;gap:0.35rem;flex-wrap:wrap;flex-shrink:0;}
+    .badge{font-family:var(--mono);font-size:0.65rem;padding:0.18rem 0.5rem;border-radius:4px;font-weight:500;white-space:nowrap;}
+    .b-free{background:rgba(0,229,160,0.12);color:var(--accent);border:1px solid rgba(0,229,160,0.25);}
+    .b-auth{background:rgba(255,107,53,0.12);color:var(--accent3);border:1px solid rgba(255,107,53,0.25);}
+    .b-https{background:rgba(0,153,255,0.12);color:var(--accent2);border:1px solid rgba(0,153,255,0.25);}
+    .b-cors{background:rgba(139,92,246,0.12);color:#a78bfa;border:1px solid rgba(139,92,246,0.25);}
+    .api-cat{font-family:var(--mono);font-size:0.7rem;color:var(--text3);}
+    .api-desc{font-size:0.85rem;color:var(--text2);line-height:1.5;font-family:var(--serif);}
+    .api-link{display:inline-flex;align-items:center;gap:0.35rem;color:var(--accent2);font-size:0.78rem;text-decoration:none;font-weight:600;margin-top:auto;transition:gap 0.2s;}
+    .api-link:hover{gap:0.55rem;}
+
+    /* Pagination */
+    .pagination{display:flex;justify-content:center;gap:0.4rem;margin-top:2.5rem;flex-wrap:wrap;}
+    .page-btn{background:var(--surface);border:1px solid var(--border);color:var(--text2);padding:0.45rem 0.85rem;border-radius:7px;cursor:pointer;font-size:0.82rem;transition:all 0.2s;font-family:var(--mono);}
+    .page-btn:hover,.page-btn.active{background:var(--accent);color:#0a0e17;border-color:var(--accent);font-weight:700;}
+    .page-ellipsis{padding:0.45rem 0.5rem;color:var(--text3);font-family:var(--mono);font-size:0.82rem;}
+
+    /* Loading */
+    .loading{display:flex;align-items:center;justify-content:center;padding:4rem;gap:0.75rem;color:var(--text3);font-family:var(--mono);font-size:0.875rem;}
+    .spinner{width:24px;height:24px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite;}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .no-results{text-align:center;padding:4rem;color:var(--text2);font-family:var(--serif);}
+    .no-results .icon{font-size:2.5rem;margin-bottom:0.75rem;}
+
+    footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem;}
+    .footer-bottom{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+    .footer-bottom p{font-size:0.8rem;color:var(--text3);font-family:var(--mono);}
+
+    @media(max-width:900px){.main-layout{grid-template-columns:1fr;}.filter-sidebar{position:static;}.nav-links{display:none;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">API<span>Testing</span>Free</a>
+  <ul class="nav-links">
+    <li><a href="index.html#apis">Home</a></li>
+    <li><a href="apis.html" class="active">All APIs</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="blog.html" class="nav-cta">Read Guides →</a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> / API Directory</div>
+    <h1>Complete <em>Free API Directory</em> for Developers</h1>
+    <p>Search, filter, and browse 1,500+ free public APIs for testing, learning, and prototyping. All curated from the community-maintained public-apis repository.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong id="totalCount">1,563</strong> Total APIs</div>
+      <div class="hero-stat"><strong>40+</strong> Categories</div>
+      <div class="hero-stat"><strong id="freeCount">—</strong> No Key Required</div>
+      <div class="hero-stat"><strong id="corsCount">—</strong> CORS Enabled</div>
+    </div>
+  </div>
+</div>
+
+<div class="main-layout">
+  <!-- SIDEBAR FILTERS -->
+  <aside class="filter-sidebar">
+    <div class="filter-panel">
+      <div class="filter-panel-title">Search</div>
+      <input type="text" id="searchInput" class="search-mini" placeholder="Search APIs..." autocomplete="off" />
+    </div>
+
+    <div class="filter-panel">
+      <div class="filter-panel-title">Authentication</div>
+      <div class="filter-option"><input type="checkbox" id="f-nokey" onchange="applyFilters()" /><label for="f-nokey">No Key Required</label></div>
+      <div class="filter-option"><input type="checkbox" id="f-apikey" onchange="applyFilters()" /><label for="f-apikey">API Key</label></div>
+      <div class="filter-option"><input type="checkbox" id="f-oauth" onchange="applyFilters()" /><label for="f-oauth">OAuth</label></div>
+    </div>
+
+    <div class="filter-panel">
+      <div class="filter-panel-title">Requirements</div>
+      <div class="filter-option"><input type="checkbox" id="f-https" onchange="applyFilters()" /><label for="f-https">HTTPS Only</label></div>
+      <div class="filter-option"><input type="checkbox" id="f-cors" onchange="applyFilters()" /><label for="f-cors">CORS Enabled</label></div>
+    </div>
+
+    <div class="filter-panel">
+      <div class="filter-panel-title">Category</div>
+      <input type="text" id="catSearch" class="search-mini" placeholder="Filter categories..." autocomplete="off" oninput="filterCatList()" />
+      <div class="cat-filter-list" id="catList">
+        <button class="cat-btn active" onclick="setCategory('all', this)">All Categories</button>
+      </div>
+    </div>
+
+    <button class="reset-btn" onclick="resetFilters()">↩ Reset All Filters</button>
+  </aside>
+
+  <!-- RESULTS -->
+  <div class="results-area">
+    <div class="results-toolbar">
+      <div class="results-info">Showing <strong id="resultsCount">...</strong> APIs</div>
+      <div style="display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap;">
+        <select class="sort-select" id="sortSelect" onchange="applyFilters()">
+          <option value="default">Sort: Default</option>
+          <option value="az">Sort: A → Z</option>
+          <option value="za">Sort: Z → A</option>
+          <option value="nokey">Sort: No Key First</option>
+        </select>
+        <div class="view-toggle">
+          <button class="view-btn active" onclick="setView('grid', this)" title="Grid view">⊞</button>
+          <button class="view-btn" onclick="setView('list', this)" title="List view">☰</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="apiGrid" class="grid-view">
+      <div class="loading"><div class="spinner"></div> Loading free APIs...</div>
+    </div>
+    <div class="pagination" id="pagination"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <p>© 2025 APITestingFree.com — <a href="index.html" style="color:var(--accent);text-decoration:none">Free API Directory</a> for Developers</p>
+    <p>Data from <a href="https://github.com/public-apis/public-apis" style="color:var(--text3);text-decoration:none">public-apis</a> community · MIT License</p>
+  </div>
+</footer>
+
+<script>
+  let allApis = [];
+  let filteredApis = [];
+  let currentPage = 1;
+  const PER_PAGE = 30;
+  let activeCategory = 'all';
+  let viewMode = 'grid';
+
+  async function loadApis() {
+    try {
+      const res = await fetch('https://raw.githubusercontent.com/public-apis-dev/public-apis/main/db/resources.json');
+      const data = await res.json();
+      allApis = data.entries || [];
+      document.getElementById('totalCount').textContent = allApis.length.toLocaleString();
+      const noKeyCount = allApis.filter(a => a.Auth === '').length;
+      const corsCount = allApis.filter(a => a.Cors?.toLowerCase() === 'yes').length;
+      document.getElementById('freeCount').textContent = noKeyCount.toLocaleString();
+      document.getElementById('corsCount').textContent = corsCount.toLocaleString();
+      buildCatList();
+      applyFilters();
+      // Read URL params
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('cat')) {
+        const catBtns = document.querySelectorAll('.cat-btn');
+        catBtns.forEach(b => { if (b.textContent.trim() === params.get('cat')) b.click(); });
+      }
+      if (params.get('filter') === 'no-key') document.getElementById('f-nokey').checked = true, applyFilters();
+      if (params.get('filter') === 'cors') document.getElementById('f-cors').checked = true, applyFilters();
+      if (params.get('q')) document.getElementById('searchInput').value = params.get('q'), applyFilters();
+    } catch(e) {
+      document.getElementById('apiGrid').innerHTML = `<div class="no-results"><div class="icon">⚠️</div><p>Could not load APIs. Please try refreshing the page.</p></div>`;
+    }
+  }
+
+  function buildCatList() {
+    const cats = {};
+    allApis.forEach(a => { cats[a.Category] = (cats[a.Category] || 0) + 1; });
+    const sorted = Object.entries(cats).sort((a,b) => a[0].localeCompare(b[0]));
+    const list = document.getElementById('catList');
+    list.innerHTML = `<button class="cat-btn active" onclick="setCategory('all', this)">All Categories <span class="cat-count">${allApis.length}</span></button>`;
+    sorted.forEach(([cat, count]) => {
+      const btn = document.createElement('button');
+      btn.className = 'cat-btn';
+      btn.dataset.cat = cat;
+      btn.innerHTML = `${escHtml(cat)} <span class="cat-count">${count}</span>`;
+      btn.onclick = () => setCategory(cat, btn);
+      list.appendChild(btn);
+    });
+  }
+
+  function filterCatList() {
+    const q = document.getElementById('catSearch').value.toLowerCase();
+    document.querySelectorAll('#catList .cat-btn').forEach(btn => {
+      btn.style.display = !q || btn.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  }
+
+  function setCategory(cat, el) {
+    activeCategory = cat;
+    currentPage = 1;
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const noKey = document.getElementById('f-nokey').checked;
+    const apiKey = document.getElementById('f-apikey').checked;
+    const oauth = document.getElementById('f-oauth').checked;
+    const https = document.getElementById('f-https').checked;
+    const cors = document.getElementById('f-cors').checked;
+    const search = document.getElementById('searchInput').value.toLowerCase().trim();
+    const sort = document.getElementById('sortSelect').value;
+
+    filteredApis = allApis.filter(api => {
+      if (activeCategory !== 'all' && api.Category !== activeCategory) return false;
+      if (noKey && api.Auth !== '') return false;
+      if (apiKey && api.Auth !== 'apiKey') return false;
+      if (oauth && api.Auth !== 'OAuth') return false;
+      if (https && !api.HTTPS) return false;
+      if (cors && api.Cors?.toLowerCase() !== 'yes') return false;
+      if (search) {
+        const hay = `${api.API} ${api.Description} ${api.Category}`.toLowerCase();
+        if (!hay.includes(search)) return false;
+      }
+      return true;
+    });
+
+    if (sort === 'az') filteredApis.sort((a,b) => a.API.localeCompare(b.API));
+    else if (sort === 'za') filteredApis.sort((a,b) => b.API.localeCompare(a.API));
+    else if (sort === 'nokey') filteredApis.sort((a,b) => (a.Auth === '' ? -1 : 1));
+
+    currentPage = 1;
+    renderApis();
+    renderPagination();
+  }
+
+  document.getElementById('searchInput').addEventListener('input', () => { clearTimeout(window._st); window._st = setTimeout(applyFilters, 250); });
+
+  function renderApis() {
+    const start = (currentPage-1)*PER_PAGE;
+    const page = filteredApis.slice(start, start+PER_PAGE);
+    const grid = document.getElementById('apiGrid');
+    document.getElementById('resultsCount').innerHTML = `<strong>${filteredApis.length.toLocaleString()}</strong>`;
+
+    if (!page.length) {
+      grid.innerHTML = `<div class="no-results"><div class="icon">🔍</div><p>No APIs found. Try adjusting the search or filters above.</p></div>`;
+      return;
+    }
+
+    if (viewMode === 'grid') {
+      grid.innerHTML = page.map(api => renderGridCard(api)).join('');
+    } else {
+      grid.innerHTML = page.map(api => renderListCard(api)).join('');
+    }
+  }
+
+  function renderGridCard(api) {
+    const authBadge = api.Auth === '' ? `<span class="badge b-free">No Key</span>` : `<span class="badge b-auth">${escHtml(api.Auth)}</span>`;
+    const httpsBadge = api.HTTPS ? `<span class="badge b-https">HTTPS</span>` : '';
+    const corsBadge = api.Cors?.toLowerCase() === 'yes' ? `<span class="badge b-cors">CORS</span>` : '';
+    return `<article class="api-card" itemscope itemtype="https://schema.org/SoftwareApplication">
+      <div class="api-card-top">
+        <div class="api-name" itemprop="name">${escHtml(api.API)}</div>
+        <div class="api-badges">${authBadge}${httpsBadge}${corsBadge}</div>
+      </div>
+      <div class="api-cat">📂 ${escHtml(api.Category)}</div>
+      <p class="api-desc" itemprop="description">${escHtml(api.Description)}</p>
+      <a href="${escHtml(api.Link)}" target="_blank" rel="noopener noreferrer" class="api-link" itemprop="url">View Docs →</a>
+    </article>`;
+  }
+
+  function renderListCard(api) {
+    const authBadge = api.Auth === '' ? `<span class="badge b-free">No Key</span>` : `<span class="badge b-auth">${escHtml(api.Auth)}</span>`;
+    const httpsBadge = api.HTTPS ? `<span class="badge b-https">HTTPS</span>` : '';
+    const corsBadge = api.Cors?.toLowerCase() === 'yes' ? `<span class="badge b-cors">CORS</span>` : '';
+    return `<article class="api-card" itemscope itemtype="https://schema.org/SoftwareApplication">
+      <div class="api-card-main">
+        <div class="api-card-top">
+          <div class="api-name" itemprop="name">${escHtml(api.API)}</div>
+          <div class="api-badges">${authBadge}${httpsBadge}${corsBadge}</div>
+        </div>
+        <div class="api-cat" style="margin:0.3rem 0">📂 ${escHtml(api.Category)}</div>
+        <p class="api-desc" itemprop="description">${escHtml(api.Description)}</p>
+      </div>
+      <div class="api-card-action">
+        <a href="${escHtml(api.Link)}" target="_blank" rel="noopener noreferrer" class="api-link" itemprop="url">View Docs →</a>
+      </div>
+    </article>`;
+  }
+
+  function renderPagination() {
+    const total = Math.ceil(filteredApis.length / PER_PAGE);
+    const pg = document.getElementById('pagination');
+    if (total <= 1) { pg.innerHTML = ''; return; }
+    let html = '';
+    if (currentPage > 1) html += `<button class="page-btn" onclick="goPage(${currentPage-1})">← Prev</button>`;
+    getPageRange(currentPage, total).forEach(p => {
+      if (p === '...') html += `<span class="page-ellipsis">…</span>`;
+      else html += `<button class="page-btn ${p===currentPage?'active':''}" onclick="goPage(${p})">${p}</button>`;
+    });
+    if (currentPage < total) html += `<button class="page-btn" onclick="goPage(${currentPage+1})">Next →</button>`;
+    pg.innerHTML = html;
+  }
+
+  function getPageRange(cur, total) {
+    if (total <= 7) return Array.from({length:total},(_,i)=>i+1);
+    if (cur <= 4) return [1,2,3,4,5,'...',total];
+    if (cur >= total-3) return [1,'...',total-4,total-3,total-2,total-1,total];
+    return [1,'...',cur-1,cur,cur+1,'...',total];
+  }
+
+  function goPage(p) {
+    currentPage = p;
+    renderApis();
+    renderPagination();
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  function setView(mode, btn) {
+    viewMode = mode;
+    document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const grid = document.getElementById('apiGrid');
+    grid.className = mode === 'grid' ? 'grid-view' : 'list-view';
+    renderApis();
+  }
+
+  function resetFilters() {
+    ['f-nokey','f-apikey','f-oauth','f-https','f-cors'].forEach(id => document.getElementById(id).checked = false);
+    document.getElementById('searchInput').value = '';
+    document.getElementById('sortSelect').value = 'default';
+    setCategory('all', document.querySelector('.cat-btn'));
+  }
+
+  function escHtml(s) {
+    if (!s) return '';
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  loadApis();
+</script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build a Weather App Using Free Public APIs — Step-by-Step 2025 | APITestingFree</title>
+  <meta name="description" content="Step-by-step tutorial: build a real weather dashboard using Open-Meteo free API and JavaScript. Full source code included. No API key required." />
+  <meta name="keywords" content="build weather app free api, free weather api tutorial, open-meteo tutorial, weather app javascript, free weather api no key, weather api for beginners, javascript weather project" />
+  <link rel="canonical" href="https://apitestingfree.com/blog/build-weather-app-free-api.html" />
+  <meta property="og:title" content="Build a Weather App Using Free Public APIs — Step-by-Step 2025" />
+  <meta property="og:description" content="Build a complete weather dashboard with Open-Meteo's free API and plain JavaScript. Full source code included." />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Build a Weather App Using Free Public APIs — Step-by-Step 2025",
+    "description": "Complete walkthrough for building a JavaScript weather app using the Open-Meteo free API. Includes full source code.",
+    "author": { "@type": "Organization", "name": "APITestingFree" },
+    "publisher": { "@type": "Organization", "name": "APITestingFree", "url": "https://apitestingfree.com" },
+    "datePublished": "2025-03-01",
+    "dateModified": "2025-03-20",
+    "url": "https://apitestingfree.com/blog/build-weather-app-free-api.html",
+    "keywords": "weather app free api, open-meteo, javascript weather app, free api tutorial"
+  }
+  </script>
+  <style>
+    :root{--bg:#0a0e17;--bg2:#0f1521;--bg3:#141c2e;--surface:#1a2336;--surface2:#1f2b42;--border:#2a3a58;--accent:#00e5a0;--accent2:#0099ff;--accent3:#ff6b35;--text:#e8edf5;--text2:#8fa3c0;--text3:#5a7299;--mono:'DM Mono',monospace;--serif:'Lora',serif;--sans:'Syne',sans-serif;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;background:rgba(10,14,23,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+    .nav-logo{font-size:1.15rem;font-weight:800;color:var(--accent);text-decoration:none;}
+    .nav-logo span{color:var(--text2);font-weight:400;}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{color:var(--text2);text-decoration:none;font-size:0.875rem;font-weight:600;transition:color 0.2s;}
+    .nav-links a:hover{color:var(--accent);}
+    .nav-cta{background:var(--accent);color:#0a0e17;padding:0.45rem 1.1rem;border-radius:6px;font-size:0.85rem;font-weight:700;text-decoration:none;}
+    .article-layout{max-width:1100px;margin:0 auto;padding:6rem 2rem 5rem;display:grid;grid-template-columns:1fr 280px;gap:4rem;align-items:start;}
+    article{min-width:0;}
+    .breadcrumb{font-family:var(--mono);font-size:0.75rem;color:var(--text3);margin-bottom:1.5rem;}
+    .breadcrumb a{color:var(--text3);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--accent);}
+    .art-cat{font-family:var(--mono);font-size:0.72rem;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;}
+    .art-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin-bottom:1.25rem;}
+    .art-title em{font-style:normal;color:var(--accent);}
+    .art-meta{display:flex;gap:1.5rem;font-family:var(--mono);font-size:0.75rem;color:var(--text3);margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border);flex-wrap:wrap;}
+    .art-meta strong{color:var(--text2);}
+    .art-intro{font-family:var(--serif);font-size:1.1rem;line-height:1.8;color:var(--text2);margin-bottom:2.5rem;padding:1.5rem;background:rgba(0,229,160,0.05);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;}
+    h2{font-size:1.4rem;font-weight:800;margin:2.5rem 0 1rem;letter-spacing:-0.02em;}
+    h2 em{font-style:normal;color:var(--accent);}
+    h3{font-size:1.1rem;font-weight:700;margin:1.75rem 0 0.5rem;color:var(--accent);}
+    p{font-family:var(--serif);font-size:0.975rem;line-height:1.8;color:var(--text2);margin-bottom:1rem;}
+    strong{color:var(--text);font-family:var(--sans);}
+    a{color:var(--accent2);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    code{font-family:var(--mono);font-size:0.85em;background:var(--surface);padding:0.15em 0.4em;border-radius:4px;color:var(--accent);}
+    pre{background:#060a12;border:1px solid var(--border);border-radius:10px;padding:1.5rem;overflow-x:auto;margin:1.5rem 0;}
+    pre code{background:none;padding:0;font-size:0.85rem;line-height:1.8;color:var(--text2);}
+    .c-key{color:#79c0ff;}.c-str{color:#a5d6ff;}.c-val{color:#00e5a0;}.c-comment{color:#5a7299;}.c-kw{color:#ff7b72;}.c-fn{color:#d2a8ff;}.c-tag{color:#7ee787;}.c-attr{color:#79c0ff;}
+    .callout{background:rgba(0,153,255,0.07);border:1px solid rgba(0,153,255,0.25);border-radius:10px;padding:1.25rem 1.5rem;margin:2rem 0;}
+    .callout-title{font-weight:700;color:var(--accent2);margin-bottom:0.4rem;font-size:0.9rem;}
+    .callout p{margin:0;font-size:0.875rem;}
+    .callout-green{background:rgba(0,229,160,0.05);border-color:rgba(0,229,160,0.3);}
+    .callout-green .callout-title{color:var(--accent);}
+    .callout-orange{background:rgba(255,107,53,0.07);border-color:rgba(255,107,53,0.3);}
+    .callout-orange .callout-title{color:var(--accent3);}
+    .toc{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:2rem;}
+    .toc-title{font-size:0.875rem;font-weight:700;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);}
+    .toc ol{padding-left:1.25rem;display:flex;flex-direction:column;gap:0.35rem;}
+    .toc a{color:var(--text2);font-size:0.85rem;text-decoration:none;font-family:var(--serif);}
+    .toc a:hover{color:var(--accent);}
+    .step-badge{display:inline-block;background:var(--accent);color:#0a0e17;font-family:var(--mono);font-size:0.72rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:4px;margin-bottom:0.5rem;}
+    .prereq-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin:1rem 0;}
+    .prereq-list li{font-family:var(--serif);font-size:0.9rem;color:var(--text2);padding-left:1.5rem;position:relative;}
+    .prereq-list li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:700;}
+    aside{position:sticky;top:80px;}
+    .sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin-bottom:1.25rem;}
+    .sidebar-title{font-size:0.85rem;font-weight:700;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);}
+    .sidebar-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+    .sidebar-list a{color:var(--text2);text-decoration:none;font-size:0.82rem;font-family:var(--serif);transition:color 0.2s;line-height:1.4;display:block;}
+    .sidebar-list a:hover{color:var(--accent);}
+    footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem;}
+    .footer-bottom{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+    .footer-bottom p{font-size:0.8rem;color:var(--text3);font-family:var(--mono);}
+    @media(max-width:860px){.article-layout{grid-template-columns:1fr;}.nav-links{display:none;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo">API<span>Testing</span>Free</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../apis.html">All APIs</a></li>
+    <li><a href="../blog.html" class="active">Blog</a></li>
+    <li><a href="../categories.html">Categories</a></li>
+    <li><a href="../about.html">About</a></li>
+  </ul>
+  <a href="../apis.html" class="nav-cta">Browse Free APIs →</a>
+</nav>
+
+<div class="article-layout">
+  <article itemscope itemtype="https://schema.org/BlogPosting">
+    <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../blog.html">Blog</a> / Weather App Tutorial</div>
+    <div class="art-cat">Project Tutorial · JavaScript</div>
+    <h1 class="art-title" itemprop="headline">Build a <em>Weather App</em> Using Only Free Public APIs</h1>
+    <div class="art-meta">
+      <span>📅 <strong>March 2025</strong></span>
+      <span>⏱ 15 min read</span>
+      <span>🏷️ JavaScript · Project · Weather API</span>
+    </div>
+
+    <p class="art-intro" itemprop="description">In this step-by-step tutorial, you'll build a fully functional weather dashboard using Open-Meteo — a completely free weather API with no registration, no API key, and no rate-limit anxiety. By the end, you'll have a weather app that shows current conditions, temperature, wind speed, and a 7-day forecast for any city in the world. Full source code included.</p>
+
+    <div class="toc">
+      <div class="toc-title">📋 Table of Contents</div>
+      <ol>
+        <li><a href="#overview">Project Overview & What You'll Build</a></li>
+        <li><a href="#apis-used">The Free APIs We'll Use</a></li>
+        <li><a href="#step1">Step 1: HTML Structure</a></li>
+        <li><a href="#step2">Step 2: Get Coordinates from a City Name</a></li>
+        <li><a href="#step3">Step 3: Fetch Weather Data</a></li>
+        <li><a href="#step4">Step 4: Display the Weather</a></li>
+        <li><a href="#step5">Step 5: Add the 7-Day Forecast</a></li>
+        <li><a href="#fullcode">Complete Source Code</a></li>
+        <li><a href="#next">Next Steps & Enhancements</a></li>
+      </ol>
+    </div>
+
+    <h2 id="overview">Project Overview & <em>What You'll Build</em></h2>
+    <p>We're building a weather app that: accepts a city name typed by the user, converts that city name to GPS coordinates, fetches real-time weather from Open-Meteo, and displays temperature, weather condition, wind speed, humidity, and a 7-day forecast. All for free, with no API key.</p>
+    <p><strong>Prerequisites:</strong></p>
+    <ul class="prereq-list">
+      <li>Basic HTML and CSS knowledge</li>
+      <li>Beginner JavaScript (variables, functions, if statements)</li>
+      <li>Some familiarity with async/await (we'll explain as we go)</li>
+    </ul>
+
+    <h2 id="apis-used">The Free <em>APIs We'll Use</em></h2>
+    <p><strong>Open-Meteo</strong> (<code>open-meteo.com</code>) — A completely free weather API that provides current conditions and forecasts for any coordinates. No API key, no registration, 10,000 free requests per day.</p>
+    <p><strong>Open-Meteo Geocoding API</strong> (<code>geocoding-api.open-meteo.com</code>) — Also from Open-Meteo, this converts city names to latitude/longitude coordinates. Free, no key needed.</p>
+
+    <div class="callout">
+      <div class="callout-title">🌍 Why Open-Meteo?</div>
+      <p>Unlike most weather APIs, Open-Meteo is genuinely free forever for non-commercial use — no credit card, no free tier that expires, no sneaky limits. It uses open-source weather models (GFS, ECMWF) and is accurate enough for real production apps. It's the best free weather API available in 2025.</p>
+    </div>
+
+    <h2 id="step1">Step 1: <em>HTML Structure</em></h2>
+    <div class="step-badge">STEP 1</div>
+    <p>Create an <code>index.html</code> file with this basic structure. We'll fill in the JavaScript over the next steps:</p>
+    <pre><code><span class="c-tag">&lt;!DOCTYPE html&gt;</span>
+<span class="c-tag">&lt;html</span> <span class="c-attr">lang</span>=<span class="c-str">"en"</span><span class="c-tag">&gt;</span>
+<span class="c-tag">&lt;head&gt;</span>
+  <span class="c-tag">&lt;meta</span> <span class="c-attr">charset</span>=<span class="c-str">"UTF-8"</span> <span class="c-tag">/&gt;</span>
+  <span class="c-tag">&lt;title&gt;</span>Free Weather App<span class="c-tag">&lt;/title&gt;</span>
+  <span class="c-tag">&lt;style&gt;</span>
+    body { font-family: sans-serif; max-width: 500px; margin: 2rem auto; padding: 1rem; }
+    input { width: 100%; padding: 0.75rem; font-size: 1rem; margin-bottom: 0.5rem; }
+    button { padding: 0.75rem 1.5rem; background: #00e5a0; border: none; cursor: pointer; font-size: 1rem; }
+    #weather { margin-top: 2rem; padding: 1.5rem; border: 1px solid #ddd; border-radius: 8px; display: none; }
+    #error { color: red; margin-top: 1rem; }
+    .forecast { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+    .day { border: 1px solid #ddd; padding: 0.5rem; border-radius: 6px; text-align: center; font-size: 0.85rem; }
+  <span class="c-tag">&lt;/style&gt;</span>
+<span class="c-tag">&lt;/head&gt;</span>
+<span class="c-tag">&lt;body&gt;</span>
+  <span class="c-tag">&lt;h1&gt;</span>🌤️ Free Weather App<span class="c-tag">&lt;/h1&gt;</span>
+  <span class="c-tag">&lt;input</span> <span class="c-attr">id</span>=<span class="c-str">"cityInput"</span> <span class="c-attr">type</span>=<span class="c-str">"text"</span> <span class="c-attr">placeholder</span>=<span class="c-str">"Enter a city name..."</span> <span class="c-tag">/&gt;</span>
+  <span class="c-tag">&lt;button</span> <span class="c-attr">onclick</span>=<span class="c-str">"getWeather()"</span><span class="c-tag">&gt;</span>Get Weather<span class="c-tag">&lt;/button&gt;</span>
+  <span class="c-tag">&lt;div</span> <span class="c-attr">id</span>=<span class="c-str">"error"</span><span class="c-tag">&gt;&lt;/div&gt;</span>
+  <span class="c-tag">&lt;div</span> <span class="c-attr">id</span>=<span class="c-str">"weather"</span><span class="c-tag">&gt;</span>
+    <span class="c-tag">&lt;h2</span> <span class="c-attr">id</span>=<span class="c-str">"cityName"</span><span class="c-tag">&gt;&lt;/h2&gt;</span>
+    <span class="c-tag">&lt;p</span> <span class="c-attr">id</span>=<span class="c-str">"temp"</span><span class="c-tag">&gt;&lt;/p&gt;</span>
+    <span class="c-tag">&lt;p</span> <span class="c-attr">id</span>=<span class="c-str">"wind"</span><span class="c-tag">&gt;&lt;/p&gt;</span>
+    <span class="c-tag">&lt;p</span> <span class="c-attr">id</span>=<span class="c-str">"condition"</span><span class="c-tag">&gt;&lt;/p&gt;</span>
+    <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"forecast"</span> <span class="c-attr">id</span>=<span class="c-str">"forecast"</span><span class="c-tag">&gt;&lt;/div&gt;</span>
+  <span class="c-tag">&lt;/div&gt;</span>
+  <span class="c-tag">&lt;script&gt;</span><span class="c-comment">/* JavaScript goes here */</span><span class="c-tag">&lt;/script&gt;</span>
+<span class="c-tag">&lt;/body&gt;</span>
+<span class="c-tag">&lt;/html&gt;</span></code></pre>
+
+    <h2 id="step2">Step 2: Get Coordinates from a <em>City Name</em></h2>
+    <div class="step-badge">STEP 2</div>
+    <p>Open-Meteo needs latitude/longitude, not a city name. So the first API call converts the city name to coordinates using the free geocoding API:</p>
+    <pre><code><span class="c-comment">// Convert a city name to lat/lng using Open-Meteo's free geocoding API</span>
+<span class="c-kw">async function</span> <span class="c-fn">getCityCoords</span>(cityName) {
+  <span class="c-kw">const</span> url = <span class="c-str">`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(cityName)}&count=1`</span>;
+  <span class="c-kw">const</span> response = <span class="c-kw">await</span> <span class="c-fn">fetch</span>(url);
+  <span class="c-kw">const</span> data = <span class="c-kw">await</span> response.<span class="c-fn">json</span>();
+
+  <span class="c-kw">if</span> (!data.results || data.results.length === <span class="c-val">0</span>) {
+    <span class="c-kw">throw new</span> <span class="c-fn">Error</span>(<span class="c-str">'City not found. Try a different spelling.'</span>);
+  }
+
+  <span class="c-kw">const</span> { name, latitude, longitude, country } = data.results[<span class="c-val">0</span>];
+  <span class="c-kw">return</span> { name, latitude, longitude, country };
+}</code></pre>
+    <p>The <code>encodeURIComponent()</code> call is important — it safely encodes special characters in city names (like "São Paulo" or "Zürich") into URL-safe format. Always encode user input before putting it in a URL.</p>
+
+    <h2 id="step3">Step 3: Fetch Weather <em>Data</em></h2>
+    <div class="step-badge">STEP 3</div>
+    <p>Now use the coordinates to call the actual weather API. We'll request current weather plus a 7-day daily forecast:</p>
+    <pre><code><span class="c-comment">// Fetch weather data from the free Open-Meteo API</span>
+<span class="c-kw">async function</span> <span class="c-fn">fetchWeather</span>(lat, lng) {
+  <span class="c-kw">const</span> params = <span class="c-kw">new</span> <span class="c-fn">URLSearchParams</span>({
+    latitude: lat,
+    longitude: lng,
+    current_weather: <span class="c-str">'true'</span>,
+    daily: <span class="c-str">'temperature_2m_max,temperature_2m_min,weathercode'</span>,
+    timezone: <span class="c-str">'auto'</span>   <span class="c-comment">// Auto-detect timezone based on coordinates</span>
+  });
+
+  <span class="c-kw">const</span> url = <span class="c-str">`https://api.open-meteo.com/v1/forecast?${params}`</span>;
+  <span class="c-kw">const</span> response = <span class="c-kw">await</span> <span class="c-fn">fetch</span>(url);
+
+  <span class="c-kw">if</span> (!response.ok) <span class="c-kw">throw new</span> <span class="c-fn">Error</span>(<span class="c-str">'Weather API request failed'</span>);
+  <span class="c-kw">return</span> response.<span class="c-fn">json</span>();
+}</code></pre>
+    <p>Using <code>URLSearchParams</code> is the clean way to build query strings — far better than string concatenation, and it handles encoding automatically.</p>
+
+    <h2 id="step4">Step 4: <em>Display</em> the Weather</h2>
+    <div class="step-badge">STEP 4</div>
+    <p>Open-Meteo returns a <code>weathercode</code> (WMO weather code) for conditions instead of a text description. Here's a function to convert those codes to human-readable labels:</p>
+    <pre><code><span class="c-comment">// WMO Weather codes → human-readable condition + emoji</span>
+<span class="c-kw">function</span> <span class="c-fn">getCondition</span>(code) {
+  <span class="c-kw">const</span> conditions = {
+    <span class="c-val">0</span>: <span class="c-str">'☀️ Clear sky'</span>, <span class="c-val">1</span>: <span class="c-str">'🌤️ Mainly clear'</span>, <span class="c-val">2</span>: <span class="c-str">'⛅ Partly cloudy'</span>,
+    <span class="c-val">3</span>: <span class="c-str">'☁️ Overcast'</span>, <span class="c-val">45</span>: <span class="c-str">'🌫️ Foggy'</span>, <span class="c-val">61</span>: <span class="c-str">'🌧️ Light rain'</span>,
+    <span class="c-val">63</span>: <span class="c-str">'🌧️ Moderate rain'</span>, <span class="c-val">65</span>: <span class="c-str">'🌧️ Heavy rain'</span>,
+    <span class="c-val">71</span>: <span class="c-str">'🌨️ Light snow'</span>, <span class="c-val">73</span>: <span class="c-str">'❄️ Moderate snow'</span>,
+    <span class="c-val">80</span>: <span class="c-str">'🌦️ Rain showers'</span>, <span class="c-val">95</span>: <span class="c-str">'⛈️ Thunderstorm'</span>
+  };
+  <span class="c-kw">return</span> conditions[code] || <span class="c-str">'🌡️ Unknown'</span>;
+}
+
+<span class="c-comment">// Update the DOM with weather data</span>
+<span class="c-kw">function</span> <span class="c-fn">displayWeather</span>(city, country, weatherData) {
+  <span class="c-kw">const</span> { current_weather } = weatherData;
+  document.<span class="c-fn">getElementById</span>(<span class="c-str">'cityName'</span>).textContent = <span class="c-str">`${city}, ${country}`</span>;
+  document.<span class="c-fn">getElementById</span>(<span class="c-str">'temp'</span>).textContent = <span class="c-str">`🌡️ ${current_weather.temperature}°C`</span>;
+  document.<span class="c-fn">getElementById</span>(<span class="c-str">'wind'</span>).textContent = <span class="c-str">`💨 Wind: ${current_weather.windspeed} km/h`</span>;
+  document.<span class="c-fn">getElementById</span>(<span class="c-str">'condition'</span>).textContent = <span class="c-fn">getCondition</span>(current_weather.weathercode);
+  document.<span class="c-fn">getElementById</span>(<span class="c-str">'weather'</span>).style.display = <span class="c-str">'block'</span>;
+}</code></pre>
+
+    <h2 id="step5">Step 5: Add the <em>7-Day Forecast</em></h2>
+    <div class="step-badge">STEP 5</div>
+    <pre><code><span class="c-comment">// Render the 7-day forecast cards</span>
+<span class="c-kw">function</span> <span class="c-fn">displayForecast</span>(daily) {
+  <span class="c-kw">const</span> days = [<span class="c-str">'Sun'</span>,<span class="c-str">'Mon'</span>,<span class="c-str">'Tue'</span>,<span class="c-str">'Wed'</span>,<span class="c-str">'Thu'</span>,<span class="c-str">'Fri'</span>,<span class="c-str">'Sat'</span>];
+  <span class="c-kw">const</span> html = daily.time.map((dateStr, i) => {
+    <span class="c-kw">const</span> dayName = days[<span class="c-kw">new</span> <span class="c-fn">Date</span>(dateStr).getDay()];
+    <span class="c-kw">const</span> max = Math.<span class="c-fn">round</span>(daily.temperature_2m_max[i]);
+    <span class="c-kw">const</span> min = Math.<span class="c-fn">round</span>(daily.temperature_2m_min[i]);
+    <span class="c-kw">const</span> icon = <span class="c-fn">getCondition</span>(daily.weathercode[i]).split(<span class="c-str">' '</span>)[<span class="c-val">0</span>]; <span class="c-comment">// emoji only</span>
+    <span class="c-kw">return</span> <span class="c-str">`&lt;div class="day"&gt;&lt;b&gt;${dayName}&lt;/b&gt;&lt;br&gt;${icon}&lt;br&gt;${max}° / ${min}°&lt;/div&gt;`</span>;
+  }).<span class="c-fn">join</span>(<span class="c-str">''</span>);
+  document.<span class="c-fn">getElementById</span>(<span class="c-str">'forecast'</span>).innerHTML = html;
+}</code></pre>
+
+    <h2 id="fullcode">Complete <em>Source Code</em></h2>
+    <p>Here's the complete <code>&lt;script&gt;</code> block that ties everything together:</p>
+    <pre><code><span class="c-kw">async function</span> <span class="c-fn">getWeather</span>() {
+  <span class="c-kw">const</span> city = document.<span class="c-fn">getElementById</span>(<span class="c-str">'cityInput'</span>).value.trim();
+  <span class="c-kw">const</span> errorEl = document.<span class="c-fn">getElementById</span>(<span class="c-str">'error'</span>);
+  errorEl.textContent = <span class="c-str">''</span>;
+
+  <span class="c-kw">if</span> (!city) { errorEl.textContent = <span class="c-str">'Please enter a city name.'</span>; <span class="c-kw">return</span>; }
+
+  <span class="c-kw">try</span> {
+    <span class="c-comment">// API Call 1: Convert city name → coordinates (free geocoding API)</span>
+    <span class="c-kw">const</span> { name, latitude, longitude, country } = <span class="c-kw">await</span> <span class="c-fn">getCityCoords</span>(city);
+
+    <span class="c-comment">// API Call 2: Fetch weather for those coordinates (free weather API)</span>
+    <span class="c-kw">const</span> weatherData = <span class="c-kw">await</span> <span class="c-fn">fetchWeather</span>(latitude, longitude);
+
+    <span class="c-comment">// Update the UI</span>
+    <span class="c-fn">displayWeather</span>(name, country, weatherData);
+    <span class="c-fn">displayForecast</span>(weatherData.daily);
+
+  } <span class="c-kw">catch</span> (err) {
+    errorEl.textContent = err.message;
+    document.<span class="c-fn">getElementById</span>(<span class="c-str">'weather'</span>).style.display = <span class="c-str">'none'</span>;
+  }
+}
+
+<span class="c-comment">// Allow pressing Enter to search</span>
+document.<span class="c-fn">getElementById</span>(<span class="c-str">'cityInput'</span>)
+  .<span class="c-fn">addEventListener</span>(<span class="c-str">'keydown'</span>, e => e.key === <span class="c-str">'Enter'</span> && <span class="c-fn">getWeather</span>());</code></pre>
+
+    <h2 id="next">Next Steps & <em>Enhancements</em></h2>
+    <p><strong>1. Add a loading state.</strong> Show a spinner while the API calls are in progress. Set it visible before the try block and hidden in both the success path and catch block.</p>
+    <p><strong>2. Add Celsius/Fahrenheit toggle.</strong> Open-Meteo supports <code>&temperature_unit=fahrenheit</code> as a query parameter — no conversion math needed.</p>
+    <p><strong>3. Use the browser's Geolocation API.</strong> Instead of typing a city, call <code>navigator.geolocation.getCurrentPosition()</code> to get the user's coordinates automatically, then skip the geocoding step entirely.</p>
+    <p><strong>4. Add hourly forecasts.</strong> Open-Meteo's <code>hourly</code> parameter supports dozens of variables including UV index, precipitation probability, and cloud cover.</p>
+    <p><strong>5. Style it properly.</strong> The CSS above is minimal by design. Add your own color scheme, animations, and layout to turn this into a real portfolio piece.</p>
+
+    <div class="callout callout-green">
+      <div class="callout-title">🚀 Find More Free APIs for Projects</div>
+      <p>Browse all <strong>1,500+ free public APIs</strong> in our directory — including weather, crypto, space, sports, and more. <a href="../apis.html" style="color:var(--accent)">View the Complete API Directory →</a></p>
+    </div>
+  </article>
+
+  <aside>
+    <div class="sidebar-card" style="background:rgba(0,229,160,0.05);border-color:rgba(0,229,160,0.25);">
+      <div class="sidebar-title" style="color:var(--accent)">🗂️ Full API Directory</div>
+      <p style="font-size:0.82rem;color:var(--text2);font-family:var(--serif);margin-bottom:0.75rem;">Browse 1,500+ free public APIs organized by category.</p>
+      <a href="../apis.html" style="display:block;text-align:center;background:var(--accent);color:#0a0e17;padding:0.6rem;border-radius:7px;font-weight:700;font-size:0.85rem;text-decoration:none;">Browse APIs →</a>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-title">📖 Related Articles</div>
+      <ul class="sidebar-list">
+        <li><a href="free-rest-api-testing-guide.html">How to Test a REST API for Free</a></li>
+        <li><a href="javascript-fetch-free-api.html">JavaScript Fetch API Tutorial</a></li>
+        <li><a href="free-api-for-practice.html">Top 10 Free APIs for Practice Projects</a></li>
+        <li><a href="free-crypto-api.html">Best Free Crypto APIs for Testing</a></li>
+        <li><a href="best-free-apis-no-key.html">15 Best Free APIs — No Key Required</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-title">🏷️ Article Tags</div>
+      <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+        <span style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.25rem 0.6rem;border-radius:100px;font-size:0.75rem;">weather API</span>
+        <span style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.25rem 0.6rem;border-radius:100px;font-size:0.75rem;">Open-Meteo</span>
+        <span style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.25rem 0.6rem;border-radius:100px;font-size:0.75rem;">JavaScript</span>
+        <span style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.25rem 0.6rem;border-radius:100px;font-size:0.75rem;">project</span>
+        <span style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:0.25rem 0.6rem;border-radius:100px;font-size:0.75rem;">no key</span>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <p>© 2025 APITestingFree.com</p>
+    <p><a href="../index.html" style="color:var(--accent);text-decoration:none">Home</a> · <a href="../apis.html" style="color:var(--text3);text-decoration:none">APIs</a> · <a href="../blog.html" style="color:var(--text3);text-decoration:none">Blog</a></p>
+  </div>
+</footer>
+</body>
+</html>
